@@ -318,17 +318,15 @@ p {
 
 .header__wrapper {
   display: grid;
-  align-items: end;
-  grid-template-columns: 65px 1% 130px 1% 135px 1fr auto 1% auto auto;
-  grid-template-rows: 40px 8px 40px;
+  align-items: center;
+  grid-template-columns: 65px 130px 135px 1fr auto auto auto auto auto;
+  grid-template-rows: 40px 40px;
+  gap: 4px 1vw;
 
   grid-template-areas:
-    'logo . logoTitle . logoSubtitle nav phone . login btngroup'
-    'logo . . . . nav phone . login btngroup'
-    'logo . . . . nav . . . .';
+    'logo logoTitle logoSubtitle nav phone login searchButton personalButton menuButton'
+    'logo . . . . . . . .';
 }
-
-
 
 .header .logo {
   grid-area: logo;
@@ -356,10 +354,18 @@ p {
   grid-area: login;
 }
 
-.button__group {
-  grid-area: btngroup;
-  display: flex;
+.header .search__button {
+  grid-area: searchButton;
 }
+
+.header .personal__button {
+  grid-area: personalButton;
+}
+
+.header .menu__button {
+  grid-area: menuButton;
+}
+
 
 .logo img {
   width: 100%;
@@ -420,7 +426,6 @@ p {
   width: 28px;
   padding: 2px;
 
-  margin-left: 1vw;
   background: none;
   border: none;
   align-self: center;
@@ -430,50 +435,82 @@ p {
   padding: 10px 21px;
   height: auto;
   width: auto;
-
-  /* margin-left: 1vw; */
   background: var(--gray-light);
   border: none;
 }
 
-.toggle__button {
+.menu__button {
   display: flex;
   flex-direction: column;
 
   justify-content: space-between;
 }
 
-.toggle__button span {
+.menu__button span {
   background-color: var(--orange);
   height: 3px;
   display: block;
   width: 100%;
 }
 
-.toggle__button.active {
+.menu__button.active {
   justify-content: center;
 }
 
-.toggle__button.active span:nth-child(1) {
+.menu__button.active span:nth-child(1) {
   transform: translateY(100%) rotate(45deg);
 }
 
-.toggle__button.active span:nth-child(2) {
+.menu__button.active span:nth-child(2) {
   opacity: 0;
   z-index: -1;
 }
 
-.toggle__button.active span:nth-child(3) {
+.menu__button.active span:nth-child(3) {
   transform: translateY(-100%) rotate(-45deg);
+}
+
+.search__button:hover svg,
+.search__button:active svg,
+.personal__button:hover svg,
+.personal__button:active svg {
+  fill: var(--orange-dark);
+}
+
+@media (max-width: 1300px) {
+  .nav ul {
+    font-size: 16px;
+    gap: 6 0.5vw;
+  }
+
+  .nav li {
+    padding: 8px 15px;
+  }
 }
 
 @media (max-width: 1199px) {
   .header__wrapper {
     grid-template-areas:
-      'logo . logoTitle . nav nav phone . login btngroup'
-      'logo . logoSubtitle . nav nav phone . login btngroup'
-      'logo . logoSubtitle . nav nav . . . .';
+      'logo logoTitle nav nav phone login searchButton personalButton menuButton'
+      'logo logoSubtitle nav nav phone login searchButton personalButton menuButton';
   }
+
+  .nav ul {
+    font-size: 18px;
+  }
+
+  .nav li {
+    padding: 8px 20px;
+  }
+
+  .header .logo__title {
+    align-self: end;
+  }
+
+  .header .logo__subtitle {
+    align-self: start;
+  }
+
 }
 
 @media (max-width: 991px) {
@@ -483,9 +520,8 @@ p {
 
   .header__wrapper {
     grid-template-areas:
-      'logo . logoTitle . nav nav nav . login btngroup'
-      'logo . logoSubtitle . nav nav nav . login btngroup'
-      'logo . logoSubtitle . nav nav nav . phone phone';
+      'logo logoTitle nav nav . login searchButton personalButton menuButton'
+      'logo logoSubtitle nav nav . phone searchButton personalButton menuButton';
   }
 
   .nav ul {
@@ -493,24 +529,16 @@ p {
   }
 
   .nav li {
-    padding: 6px 15px;
-    border: 1px solid var(--gray);
-    border-radius: 45px 45px 0px 45px;
-    cursor: pointer;
-
-    transition: border .3s;
+    padding: 6px 14px;
   }
 }
 
 @media (max-width: 767px) {
   .header__wrapper {
-    gap: 10px 0;
-    grid-template-columns: 65px 10px 200px 1% auto;
-    grid-template-rows: auto;
-
+    grid-template-columns: 65px 200px 1fr auto auto auto;
     grid-template-areas:
-      'logo . logoTitle . btngroup'
-      'logo . logoSubtitle . btngroup';
+      'logo logoTitle . searchButton personalButton menuButton'
+      'logo logoSubtitle . searchButton personalButton menuButton';
   }
 
 
@@ -520,13 +548,9 @@ p {
     display: none;
   }
 
-  .header .logo__subtitle {
-    align-self: start;
-  }
-
-  .button__group {
-    align-self: center;
-    justify-self: end;
+  .search__button svg,
+  .personal__button svg {
+    fill: var(--orange-dark);
   }
 
 }
@@ -537,12 +561,11 @@ p {
   }
 
   .header__wrapper {
-    grid-template-columns: 37px 10px minmax(auto, 120px) 1% auto;
+    grid-template-columns: 37px 120px 1fr auto auto auto;
     grid-template-rows: auto;
-    gap: 4px 0;
     grid-template-areas:
-      'logo . logoTitle . btngroup'
-      'logo . logoSubtitle . btngroup';
+      'logo logoTitle . searchButton personalButton menuButton'
+      'logo logoSubtitle . searchButton personalButton menuButton';
   }
 
   .header .logo__title,
@@ -683,6 +706,31 @@ p {
   border: 1px solid #000000;
   background-color: transparent;
   padding: 16px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  transition: background-color .3s, color .3s;
+}
+
+.footer .login__button svg,
+.footer .login__button svg {
+  fill: var(--black);
+
+  transition: fill .3s;
+}
+
+.footer .login__button:hover,
+.footer .login__button:active {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.footer .login__button:hover svg,
+.footer .login__button:active svg {
+  fill: var(--white);
 }
 
 .social__list {
@@ -731,10 +779,6 @@ p {
 
   .phone__list {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .footer .login__button {
-    display: inline-block;
   }
 
 }
@@ -1427,7 +1471,9 @@ p {
 /* <application> */
 .section__application {
   position: relative;
+  margin-bottom: 40px;
 }
+
 .section__application::before {
   position: absolute;
   content: '';
@@ -1473,6 +1519,7 @@ p {
     width: 70%;
   }
 }
+
 @media (max-width: 767px) {
   .section__application::before {
     transform: scale(-1, 1);
@@ -1500,6 +1547,10 @@ p {
 }
 
 @media (max-width: 575px) {
+  .section__application {
+    margin-bottom: 30px;
+  }
+
   .section__application::before {
     background: linear-gradient(177.63deg, #C7C5C1 23vw, rgba(203, 201, 197, 0) 50%),
       url(../images/applcation-bg.jpg) no-repeat -50vw 20vw /cover;
