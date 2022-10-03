@@ -1,112 +1,88 @@
-function navigation(slider) {
-  let wrapper, dots, arrowLeft, arrowRight
-
-  function markup(remove) {
-    wrapperMarkup(remove)
-    dotMarkup(remove)
-    arrowMarkup(remove)
-  }
-
-  function removeElement(elment) {
-    elment.parentNode.removeChild(elment)
-  }
-  function createDiv(className) {
-    var div = document.createElement("div")
-    var classNames = className.split(" ")
-    classNames.forEach((name) => div.classList.add(name))
-    return div
-  }
-
-  function arrowMarkup(remove) {
-    if (remove) {
-      removeElement(arrowLeft)
-      removeElement(arrowRight)
-      return
-    }
-    arrowLeft = createDiv("arrow arrow--left")
-    arrowLeft.addEventListener("click", () => slider.prev())
-    arrowRight = createDiv("arrow arrow--right")
-    arrowRight.addEventListener("click", () => slider.next())
-
-    wrapper.appendChild(arrowLeft)
-    wrapper.appendChild(arrowRight)
-  }
-
-  function wrapperMarkup(remove) {
-    if (remove) {
-      var parent = wrapper.parentNode
-      while (wrapper.firstChild)
-        parent.insertBefore(wrapper.firstChild, wrapper)
-      removeElement(wrapper)
-      return
-    }
-    wrapper = createDiv("navigation-wrapper")
-    slider.container.parentNode.appendChild(wrapper)
-    wrapper.appendChild(slider.container)
-  }
-
-  function dotMarkup(remove) {
-    if (remove) {
-      removeElement(dots)
-      return
-    }
-    dots = createDiv("dots")
-    slider.track.details.slides.forEach((_e, idx) => {
-      var dot = createDiv("dot")
-      dot.addEventListener("click", () => slider.moveToIdx(idx))
-      dots.appendChild(dot)
-    })
-    wrapper.appendChild(dots)
-  }
-
-  function updateClasses() {
-    var slide = slider.track.details.rel
-    slide === 0
-      ? arrowLeft.classList.add("arrow--disabled")
-      : arrowLeft.classList.remove("arrow--disabled")
-    slide === slider.track.details.slides.length - 1
-      ? arrowRight.classList.add("arrow--disabled")
-      : arrowRight.classList.remove("arrow--disabled")
-    Array.from(dots.children).forEach(function (dot, idx) {
-      idx === slide
-        ? dot.classList.add("dot--active")
-        : dot.classList.remove("dot--active")
-    })
-  }
-
-  slider.on("created", () => {
-    markup()
-    updateClasses()
-  })
-  slider.on("optionsChanged", () => {
-    console.log(2)
-    markup(true)
-    markup()
-    updateClasses()
-  })
-  slider.on("slideChanged", () => {
-    updateClasses()
-  })
-  slider.on("destroyed", () => {
-    markup(true)
-  })
+function noScroll() {
+  const bodyWidth = body.offsetWidth;
+  const windowWidth = window.innerWidth;
+  const scrollWidth = windowWidth - bodyWidth;
+  body.classList.add("noscroll");
+  body.style.paddingRight = scrollWidth + "px";
 }
 
+// function getElement(name, selector) {
+//   let element = null;
+//   switch (selector) {
+//     case "#":
+//       return (element = document.getElementById(name));
+//     case ".":
+//       return (element = document.getElementsByClassName(name));
+//     default:
+//       return (element = document.getElementsByTagName(name));
+//   }
+// }
 
+// console.log("TEST", getElement("menuButton", "#"))
 
-const directionSlider = new KeenSlider("#direction__list", {
-  slides: { perView: 4, spacing: 30 },
-  breakpoints: {
-    "(max-width: 1199px)": {
-      slides: { perView: 3, spacing: 30 },
-    },
-    "(max-width: 991px)": {
-      slides: { perView: 2, spacing: 20 },
-    },
-    "(max-width: 575px)": {
-      slides: { perView: 1, spacing: 20 },
-    },
-  },
-},
-[navigation]
-);
+const menuBtn = document.getElementById("menuButton");
+const header = document.getElementById("header");
+const popupMenu = document.getElementById("popupMenu");
+const body = document.querySelector("body");
+
+menuBtn.addEventListener("click", (e) => {
+  const target = e.currentTarget;
+  target.classList.toggle("active");
+  if (menuBtn.classList.contains("active")) {
+    target.disabled = true;
+    noScroll();
+    popupMenu.classList.remove("animate__fadeOut");
+    const heightHeader = header.clientHeight;
+    popupMenu.style.top = heightHeader + "px";
+    popupMenu.classList.add("active", "animate__fadeIn");
+    target.disabled = false;
+  } else {
+    target.disabled = true;
+    popupMenu.classList.remove("animate__fadeIn");
+    popupMenu.classList.add("animate__fadeOut");
+    setTimeout(() => {
+      popupMenu.classList.remove("active");
+      body.style.paddingRight = 0;
+      body.classList.remove("noscroll");
+      target.disabled = false;
+    }, 500);
+  }
+});
+
+const btnStartEducation = document.getElementById("btnStartEducation");
+
+const popupStartEducation = getPopup("popupStartEducation");
+btnStartEducation.addEventListener("click", () => {
+  noScroll();
+  const popupContent = popupStartEducation.querySelector(".popup__content");
+  const btnClose = popupStartEducation.querySelector(".close__btn");
+
+  popupStartEducation.classList.add("active", "animate__fadeIn");
+  btnClose.addEventListener("click", () =>
+    closePopup(popupStartEducation, popupContent)
+  );
+  popupStartEducation.addEventListener("click", () =>
+    closePopup(popupStartEducation, popupContent)
+  );
+
+  setTimeout(() => {
+    popupContent.classList.add("active", "animate__backInDown");
+  }, 300);
+});
+
+function getPopup(id) {
+  return document.querySelector(".popup#" + id);
+}
+
+function closePopup(popup, popupContent) {
+  popup.classList.remove("animate__fadeIn");
+  popupContent.classList.remove("animate__backInDown");
+  popupContent.classList.add("animate__backOutDown");
+  popup.classList.add("animate__fadeOut");
+  setTimeout(() => {
+    popupContent.classList.remove("active", "animate__backOutDown", 'complete');
+    popup.classList.remove("active", "animate__fadeOut");
+    body.style.paddingRight = 0;
+    body.classList.remove("noscroll");
+  }, 300);
+}
