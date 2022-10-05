@@ -698,17 +698,177 @@
   z-index: -1;
 
   display: none;
+
+  overflow: hidden;
+}
+
+.popup__menu .container {
+  height: 100%;
 }
 
 .popup__menu.active {
   visibility: visible;
   z-index: 100;
   display: block;
-
 }
 
 .popup__menu.animate__fadeInDown {
   --animate-duration: .3s;
+}
+
+.popup-menu__wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.popup__menu .menu {
+  display: flex;
+  /* height: 100%; */
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.category-psy__list,
+.nav-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.category-psy__list {
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 120%;
+  color: var(--gray);
+}
+
+.category-psy__list a {
+  text-decoration: none;
+}
+
+.category-psy__item {
+  cursor: pointer;
+  border-top: 1px solid var(--gray);
+  padding: 20px 0;
+
+  transition: color .3s, border-color .3s;
+}
+
+.category-psy__item:last-child {
+  border-bottom: 1px solid var(--gray);
+}
+
+.category-psy__item:hover,
+.category-psy__item:active {
+  color: var(--orange-dark);
+  border-color: var(--orange-dark);
+}
+
+.category-psy__item:hover+li,
+.category-psy__item:active+li {
+  border-top-color: var(--orange-dark);
+}
+
+
+.nav-menu__list {
+  color: var(--gray);
+  gap: 20px;
+
+}
+
+.nav-menu__list a {
+  text-decoration: none;
+}
+
+.nav-menu__item {
+  transition: color .3s;
+}
+
+.nav-menu__item:hover,
+.nav-menu__item:active {
+  color: var(--black);
+}
+
+.popup__menu .social__list {
+  align-self: start;
+}
+
+.popup-menu__wrapper .nav {
+  display: none;
+}
+
+.popup__menu .login__button {
+  width: 100%;
+  display: none;
+}
+
+.popup__menu .phone {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .category-psy__list {
+    font-size: 5vw;
+  }
+
+  .category-psy__item {
+    padding: 1.7vw 0;
+  }
+
+  .nav-menu__list {
+    gap: 1.7vw;
+
+  }
+}
+
+@media (max-width: 767px) {
+  .popup-menu__wrapper {
+    justify-content: stretch;
+    align-items: stretch;
+    padding-top: 30px;
+  }
+
+  .category-psy__list {
+    display: none;
+  }
+
+  .nav-menu__list {
+    overflow: scroll;
+    max-height: 222px;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 20px;
+
+    background: linear-gradient(0deg, #dadada -18.04%, rgba(255, 255, 255, 0) 20%);
+  }
+
+  .popup-menu__wrapper .nav {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  .popup__menu .login__button {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .popup__menu .phone {
+    display: block;
+    align-self: center;
+  }
+
+  .popup__menu .social__list {
+    display: none;
+  }
 }
 
 /* </popup__menu> */
@@ -749,8 +909,9 @@
   position: relative;
   display: none;
 }
+
 .popup__content.active {
-display: block;
+  display: block;
 }
 
 .popup__content .close__btn {
@@ -773,7 +934,6 @@ display: block;
 }
 
 .popup .btn {
-  padding: auto;
   margin-bottom: 20px;
 }
 
@@ -829,6 +989,8 @@ display: block;
   .popup__content .close__btn {
     top: 10px;
     right: 10px;
+    width: 16px;
+    height: 14px;
   }
 
   .popup__content h4 {
@@ -873,6 +1035,8 @@ display: block;
   .popup__content .close__btn {
     top: 10px;
     right: 10px;
+    width: 16px;
+    height: 14px;
   }
 }
 
