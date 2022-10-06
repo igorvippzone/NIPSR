@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerWrapper = document.querySelector(".header__wrapper");
   const searchBlock = headerWrapper.querySelector("#searchBlock");
   // const searchCloseButton = headerWrapper.querySelector('#searchBlock')
+  const input = searchBlock.querySelector('.search__input')
   const searchButton = document.getElementById("searchButton");
 
   function searchHandler(e) {
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!headerWrapper.classList.contains("search")) {
       headerWrapper.classList.add("search");
       searchBlock.classList.add("animate__fadeIn");
+      input.focus()
       searchBlock.addEventListener("click", searchHandler);
       console.log("Добавить");
     } else {

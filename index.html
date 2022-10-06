@@ -26,15 +26,21 @@
     <div class="container">
       <div class="header__wrapper">
         <div class="logo">
-          <img src="images/logo.png" alt="logo">
+          <a href="#">
+            <img src="images/logo.png" alt="logo">
+          </a>
         </div>
 
         <div class="logo__title">
-          Национальный институт психологии и социальной работы
+          <a href="#">
+            Национальный институт психологии и социальной работы
+          </a>
         </div>
 
         <div class="logo__subtitle">
-          Лицензия департамента образования и науки города Москвы №041380а
+          <a href="#">
+            Лицензия департамента образования и науки города Москвы №041380а
+          </a>
         </div>
 
         <nav class="nav">
@@ -97,14 +103,14 @@
           </ul>
         </nav>
         <div class="menu">
-          <ul class="category-psy__list">
+          <ul class="category-psy__list ">
             <li class="category-psy__item"><a href="#">Семейная психология</a></li>
             <li class="category-psy__item"><a href="#">Детская психология</a></li>
             <li class="category-psy__item"><a href="#">Психосоматика</a></li>
             <li class="category-psy__item"><a href="#">Социальная психология</a></li>
           </ul>
 
-          <ul class="nav-menu__list">
+          <ul class="nav-menu__list custom-scroll">
             <li class="nav-menu__item">
               <h3><a href="#">Акции</a></h3>
             </li>
@@ -187,7 +193,7 @@
     </div>
   </div>
 
-  <div id="popupStartEducation" class="popup animate__animated">
+  <div data-popup="startEducation" class="popup animate__animated">
     <div class="popup__content animate__faster animate__animated">
 
       <button class="close__btn btn">
@@ -233,6 +239,35 @@
     </div>
   </div>
 
+  <div data-popup="callback" class="popup animate__animated">
+    <div class="popup__content animate__faster animate__animated">
+      <button class="close__btn btn"></button>
+      <div class="popup__inner">
+        <h2>Заказать звонок</h2>
+        <h4>Мы свяжемся с вами в ближайшее время!</h4>
+        <form action="#">
+          <div class="input__wrapper">
+            <div class="custom-input">
+              <input id="name" name="name" type="text" placeholder="Имя" />
+              <label for="name" class="label-inner">Имя</label>
+            </div>
+
+            <div class="custom-input">
+              <input id="name" name="name" type="text" placeholder="Телефон" />
+              <label for="name" class="label-inner">Телефон</label>
+            </div>
+
+            
+              <p class="explanation">Нажимая кнопку «Отправить» я даю согласие на обработку персональных данных</p>
+              <button class="btn">Отправить</button>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
   <main class="main">
     <section class="section__main-content">
       <div class="container">
@@ -249,7 +284,7 @@
               dolore magna aliqua
             </p>
             <div class="mobile main-bg"></div>
-            <a id="btnStartEducation" class="btn main__btn" href="#">Начать обучение</a>
+            <button  class="btn main__btn" href="#" data-open-popup="startEducation">Начать обучение</button>
           </div>
           <div class="main-bg"></div>
         </div>
@@ -288,6 +323,8 @@
               <img class="direction-item__image" src="images/directions/direction-2.jpg" alt="">
               <h4 class="direction-item__title">Семейная психология</h4>
               <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod</p>
               <div class="direction-item__inner">
                 <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
@@ -439,7 +476,7 @@
           <h5 class="help-choice__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et
             dolore magna aliqua</h5>
-          <a href="#" class="btn">Заказать звонок</a>
+          <button href="#" class="btn" data-open-popup="callback">Заказать звонок</и>
         </div>
       </div>
     </section>
@@ -455,7 +492,7 @@
               dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur
               adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-            <a href="#" class="btn">Начать обучение</a>
+            <button href="#" class="btn" data-open-popup="startEducation">Начать обучение</button>
           </div>
         </div>
       </div>
@@ -525,15 +562,21 @@
     <div class="container">
       <div class="footer__wrapper">
         <div class="logo">
-          <img src="images/logo.png" />
+          <a href="#">
+            <img src="images/logo.png" />
+          </a>
         </div>
 
         <div class="logo__title">
-          Национальный институт психологии и социальной работы
+          <a href="#">
+            Национальный институт психологии и социальной работы
+          </a>
         </div>
 
         <div class="logo__subtitle">
-          Лицензия департамента образования и науки города Москвы №041380а
+          <a href="#">
+            Лицензия департамента образования и науки города Москвы №041380а
+          </a>
         </div>
 
         <nav class="footer__nav">

@@ -49,7 +49,7 @@ a {
 
 .noscroll {
   overflow: hidden;
-  position: fixed;
+  position: absolute;
 
   height: 100%;
   width: 100%;
@@ -207,6 +207,23 @@ p {
   background-color: transparent;
 }
 
+.custom-scroll{
+  scrollbar-width: 4px;
+  scrollbar-color: var(--orange) var(--gray);
+}
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: var(--gray);
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border: none;
+}
+
 @media (max-width:1199px) {
   h2 {
     font-size: 4vw;
@@ -217,7 +234,7 @@ p {
 }
 
 @media (max-width:991px) {
-  h3{
+  h3 {
     font-size: 3.2vw;
   }
 }
@@ -665,11 +682,23 @@ p {
   line-height: 120%;
 }
 
+.logo__title a,
+.logo__subtitle a {
+  text-decoration: none;
+}
+
 .logo__subtitle {
   font-weight: 400;
   font-size: 10px;
   line-height: 120%;
   color: var(--orange-dark);
+
+  transition: color .3s;
+}
+
+.logo__subtitle:hover,
+.logo__subtitle:active {
+  color: var(--orange);
 }
 
 .nav ul {
@@ -1034,21 +1063,21 @@ p {
   transition: background-color .3s, color .3s;
 }
 
- .login__button svg,
- .login__button svg {
+.login__button svg,
+.login__button svg {
   fill: var(--black);
 
   transition: fill .3s;
 }
 
- .login__button:hover,
- .login__button:active {
+.login__button:hover,
+.login__button:active {
   color: var(--white);
   background-color: var(--black);
 }
 
 .login__button:hover svg,
- .login__button:active svg {
+.login__button:active svg {
   fill: var(--white);
 }
 
@@ -1074,6 +1103,11 @@ p {
   height: 100%;
 }
 
+.social__list li:hover svg{
+  fill: var(--orange);
+
+  transition: fill .3s;
+}
 .social__list li:hover svg,
 .social__list li:hover svg {
   fill: var(--orange-dark);

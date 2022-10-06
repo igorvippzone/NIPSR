@@ -1,13 +1,14 @@
+// document.designMode = 'on'
 const menuBtn = document.getElementById("menuButton");
 const header = document.getElementById("header");
 const popupMenu = document.getElementById("popupMenu");
 const body = document.querySelector("body");
-const btnStartEducation = document.getElementById("btnStartEducation");
-const popupStartEducation = getPopup("popupStartEducation");
+const popupButtons = document.querySelectorAll("[data-open-popup]");
+const popups = document.querySelectorAll("[data-popup]");
 
-function getPopup(id) {
-  return document.querySelector(".popup#" + id);
-}
+popupButtons.forEach((button) => {
+  button.addEventListener("click", () => togglePopup(button.dataset.openPopup));
+});
 
 function noScroll() {
   const bodyWidth = body.offsetWidth;
@@ -36,6 +37,24 @@ function closePopup(popup, popupContent, event) {
   }
 }
 
+function togglePopup(popupName) {
+  const popup = [...popups].find((p) => p.dataset.popup === popupName);
+  if (popup) {
+    noScroll();
+    const popupContent = popup.querySelector(".popup__content");
+    const btnClose = popup.querySelector(".close__btn");
+    popup.classList.add("active", "animate__fadeIn");
+
+    btnClose.addEventListener("click", (e) =>
+      closePopup(popup, popupContent, e)
+    );
+    popup.addEventListener("click", (e) => closePopup(popup, popupContent, e));
+    setTimeout(() => {
+      popupContent.classList.add("active", "animate__backInDown");
+    }, 300);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   menuBtn.addEventListener("click", (e) => {
     const target = e.currentTarget;
@@ -59,22 +78,5 @@ document.addEventListener("DOMContentLoaded", () => {
         target.disabled = false;
       }, 500);
     }
-  });
-
-  btnStartEducation.addEventListener("click", () => {
-    noScroll();
-    const popupContent = popupStartEducation.querySelector(".popup__content");
-    const btnClose = popupStartEducation.querySelector(".close__btn");
-    popupStartEducation.classList.add("active", "animate__fadeIn");
-
-    btnClose.addEventListener("click", (e) =>
-      closePopup(popupStartEducation, popupContent, e)
-    );
-    popupStartEducation.addEventListener("click", (e) =>
-      closePopup(popupStartEducation, popupContent, e)
-    );
-    setTimeout(() => {
-      popupContent.classList.add("active", "animate__backInDown");
-    }, 300);
   });
 });
