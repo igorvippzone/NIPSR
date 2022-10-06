@@ -891,7 +891,7 @@ position: relative;
   z-index: 100;
 
   background-color: rgba(107, 125, 124, 0.3);
-  /* backdrop-filter: blur(5px); */
+  backdrop-filter: blur(5px);
   /* -webkit-filter: blur(10px) saturate(2); */
 
   display: flex;
