@@ -109,3 +109,24 @@ const directionSlider = new KeenSlider(
   },
   [navigation]
 );
+const teachersSlider = new KeenSlider(
+  "#teachers__list",
+  {
+    slides: { perView: 2, spacing: 30 },
+    breakpoints: {
+      "(max-width: 1199px)": {
+        // slides: { perView: 3, spacing: 30 },
+      },
+      "(max-width: 991px)": {
+        slides: { perView: 2, spacing: 20 },
+      },
+      "(max-width: 767px)": {
+        slides: { perView: 1, spacing: 20 },
+      },
+      "(max-width: 575px)": {
+        slides: { perView: 1, spacing: 20 },
+      },
+    },
+  },
+  [navigation]
+);

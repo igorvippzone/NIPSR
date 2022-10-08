@@ -46,6 +46,11 @@ a {
   padding: 0 30px;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .container {
+    padding: 0 28px;
+  }
+}
 
 .noscroll {
   overflow: hidden;
@@ -345,6 +350,11 @@ p {
   .breadcrumbs {
     margin-bottom: 20px;
   }
+
+  .btn{
+    font-size: 16px;
+    padding: 16px 35px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -505,7 +515,7 @@ p {
 /* <HEADER> */
 .header {
   padding-top: 14px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .header__wrapper {
@@ -801,7 +811,8 @@ p {
   white-space: nowrap;
 }
 
-.phone a {
+.phone a,
+.mail a {
   text-decoration: none;
 }
 
@@ -852,7 +863,16 @@ p {
   display: block;
   left: 0;
 
-  transition: opacity .3s;
+  transition: opacity .3s, color .3s;
+}
+
+.header .menu__button:hover span,
+.header .menu__button:hover::after,
+.header .menu__button:hover::before,
+.header .menu__button:active span,
+.header .menu__button:active::after,
+.header .menu__button:active::before {
+  background-color: var(--orange-dark);
 }
 
 .header .menu__button::after {
@@ -1124,6 +1144,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 12px;
+  color: var(--black);
 
   transition: background-color .3s, color .3s;
 }

@@ -1,0 +1,478 @@
+/* <about-us> */
+.about-us {
+  display: flex;
+  gap: 50px;
+}
+
+.about-us__bg {
+  background: url('../images/about-us/about-us-bg-1.png') no-repeat center / contain;
+  display: block;
+  width: 100%;
+}
+
+.about-us__content {
+  max-width: 770px;
+}
+
+.about-us__content h2 {
+  margin-bottom: 30px;
+}
+
+.about-us__content p {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 991px) {
+  .about-us {
+    flex-direction: column;
+    /* gap: 30px; */
+
+  }
+
+  .about-us__bg {
+    min-height: 212px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-us {
+    gap: 30px;
+  }
+
+  .about-us__content p {
+    margin-bottom: 30px;
+  }
+}
+
+/* </about-us> */
+
+/* <why-teach> */
+.section__why-teach {
+  background: linear-gradient(89.46deg, #6B7D7C 19.58%, rgba(107, 125, 124, 0.893103) 46.26%, rgba(107, 125, 124, 0.515625) 58.27%, rgba(107, 125, 124, 0) 70.81%),
+    url(../images/about-us/about-us-bg-2.jpg) no-repeat center top /cover;
+}
+
+.why-teach {
+  color: var(--white);
+  padding: 240px 0;
+
+  background: url('../images/bg-4.svg') no-repeat center right/ 435px;
+}
+
+.why-teach h2,
+.why-teach h5 {
+  max-width: 630px;
+}
+
+
+@media (min-width: 2000px) {
+  .section__why-teach {
+    background: linear-gradient(89.46deg, #6B7D7C 19.58%, rgba(107, 125, 124, 0.893103) 46.26%, rgba(107, 125, 124, 0.515625) 58.27%, rgba(107, 125, 124, 0) 70.81%),
+      url(../images/about-us/about-us-bg-2.jpg) no-repeat 5vw top/cover;
+  }
+}
+
+@media (max-width: 1199px) {
+  .why-teach {
+    padding: 20vw 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .section__why-teach {
+    background: linear-gradient(89.46deg, #6B7D7C 19.58%, rgba(107, 125, 124, 0.893103) 46.26%, rgba(107, 125, 124, 0.515625) 58.27%, rgba(107, 125, 124, 0) 70.81%),
+      url(../images/about-us/about-us-bg-2.jpg) no-repeat center top/cover;
+  }
+
+  .why-teach {
+    background: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .section__why-teach {
+    background: linear-gradient(180deg, #6B7D7C 50%, rgba(107, 125, 124, 0.879824) 60%, rgba(107, 125, 124, 0.372921) 71.53%, rgba(107, 125, 124, 0.246875) 90.31%, rgba(107, 125, 124, 0) 99.73%),
+      url(../images/about-us/about-us-bg-2.jpg) no-repeat center 40vw /cover;
+  }
+}
+
+/* </why-teach> */
+
+/* <advantages> */
+.advantages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.advantages__item {
+  border: 1px solid var(--gray);
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  transition: border-color .3s;
+}
+
+.advantages__item:hover,
+.advantages__item:active {
+  border: 1px solid var(--black);
+}
+
+.advantages__item h3 {
+  margin-bottom: 30px;
+}
+
+.advantages-item__link {
+  text-decoration: none;
+}
+
+.advantages-item__link::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.advantages__item .text {
+  margin-bottom: 40px;
+}
+
+.advantages-item__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: auto;
+}
+
+.advantages-item__footer p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  text-decoration: underline;
+}
+
+.advantages-item__footer .wrapper-arrow {
+  width: 43px;
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color .3s;
+}
+
+.advantages-item__footer .wrapper-arrow svg {
+  fill: var(--gray);
+
+  transition: fill .3s;
+}
+
+.advantages__item:hover .wrapper-arrow,
+.advantages__item:active .wrapper-arrow {
+  background-color: var(--orange);
+}
+
+.advantages__item:hover .wrapper-arrow svg,
+.advantages__item:active .wrapper-arrow svg {
+  fill: var(--white);
+}
+
+@media (max-width: 991px) {
+  .advantages__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .advantages__list {
+    gap: 20px;
+  }
+
+  .advantages__item {
+    border: 1px solid var(--black);
+    padding: 30px;
+  }
+
+  .advantages__item .wrapper-arrow {
+    background-color: var(--orange);
+  }
+
+  .advantages__item .wrapper-arrow svg {
+    fill: var(--white);
+  }
+
+  .advantages-item__footer p {
+    font-size: 14px;
+  }
+}
+
+/* </advantages> */
+
+/* <how-training> */
+.how-training__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.how-training__item {
+  padding: 100px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.how-training__current {
+  width: 80px;
+  height: 80px;
+  background: url(../images/about-us/how-training-bg.png) no-repeat center/ contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 140%;
+  margin-bottom: 30px;
+}
+
+/* Удалить после решения какую картинку оставлять */
+.how-training__item:first-child .how-training__current {
+  background: url(../images/about-us/how-training-bg.svg) no-repeat center/ contain;
+}
+
+/*  */
+
+.how-training__item:nth-child(3n-2) {
+  background-color: var(--orange-dark);
+
+}
+
+.how-training__item:nth-child(3n-1) {
+  background-color: var(--green-dark);
+}
+
+.how-training__item:nth-child(3n) {
+  background-color: var(--green);
+}
+
+@media (max-width: 1199px) {
+  .how-training__item {
+    padding: 6vw 5vw;
+  }
+}
+
+@media (max-width: 991px) {
+  .how-training__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-training__item {
+    padding: 10vw 6vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .how-training__list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .how-training__item {
+    padding: 10vw 6vw;
+  }
+
+}
+
+@media (max-width: 575px) {
+
+
+  .how-training__item {
+    padding: 60px 33px;
+  }
+
+  .how-training__current {
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* </how-training> */
+
+/* <teachers> */
+.teachers h2 {
+  margin-bottom: 20px;
+}
+
+.teachers h3 {
+  margin-bottom: 60px;
+}
+
+.teachers__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+.teachers__item {
+  padding: 24px;
+  border: 1px solid var(--gray);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+}
+
+.teachers__item:hover {
+  border: 1px solid var(--black);
+}
+
+.teachers__item img {
+  max-width: 182px;
+  max-height: 203px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teachers-item__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.teachers-item__description h4 {
+  margin-bottom: 10px;
+}
+
+.teachers-item__link {
+  text-decoration: none;
+}
+
+.teachers-item__link::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.teachers-item__description .description__education {
+  padding: 2px 8px;
+  background-color: var(--gray-dark);
+  color: var(--white);
+}
+
+.teachers-item__description p {
+  margin-bottom: 10px;
+}
+
+.teachers-item__footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid var(--gray);
+  padding-top: 12px;
+}
+
+.teachers-item__footer p {
+  text-decoration: underline;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  margin: 0;
+}
+
+.teachers-item__footer .wrapper-arrow {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color .3s;
+}
+
+.teachers-item__footer .wrapper-arrow svg {
+  fill: var(--gray);
+
+  transition: fill .3s;
+}
+
+.teachers__item:hover .wrapper-arrow {
+  background-color: var(--orange);
+}
+
+.teachers__item:hover .wrapper-arrow svg {
+  fill: var(--white);
+}
+
+
+.teachers .navigation-wrapper {
+  position: relative;
+  /* padding: 0 110px; */
+
+}
+
+.wrapper__teachers-slider {
+  padding: 0 110px;
+}
+
+.teachers .arrow {
+  position: absolute;
+  background-color: var(--orange);
+  width: 60px;
+  height: 100%;
+  top: 0%;
+  /* transform: translateY(-50%); */
+}
+
+.teachers .arrow--left {
+  left: 0;
+  transform: translateX(-110px);
+}
+
+.teachers .arrow--right {
+  right: 0;
+  transform: translateX(110px);
+}
+
+
+@media (max-width: 991px) {
+  .teachers__item {
+
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 991px) {
+  .teachers__item {
+
+    flex-direction: row;
+  }
+}
+
+/* </teachers> */
