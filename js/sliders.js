@@ -91,42 +91,49 @@ function navigation(slider) {
   });
 }
 
-const directionSlider = new KeenSlider(
-  "#direction__list",
-  {
-    slides: { perView: 4, spacing: 30 },
-    breakpoints: {
-      "(max-width: 1199px)": {
-        slides: { perView: 3, spacing: 30 },
-      },
-      "(max-width: 991px)": {
-        slides: { perView: 2, spacing: 20 },
-      },
-      "(max-width: 575px)": {
-        slides: { perView: 1, spacing: 20 },
-      },
-    },
-  },
-  [navigation]
-);
-const teachersSlider = new KeenSlider(
-  "#teachers__list",
-  {
-    slides: { perView: 2, spacing: 30 },
-    breakpoints: {
-      "(max-width: 1199px)": {
-        // slides: { perView: 3, spacing: 30 },
-      },
-      "(max-width: 991px)": {
-        slides: { perView: 2, spacing: 20 },
-      },
-      "(max-width: 767px)": {
-        slides: { perView: 1, spacing: 20 },
-      },
-      "(max-width: 575px)": {
-        slides: { perView: 1, spacing: 20 },
+const directionList = document.getElementById("direction__list");
+const teachersList = document.getElementById("teachers__list");
+
+if (directionList) {
+  const directionSlider = new KeenSlider(
+    directionList,
+    {
+      // loop: true,
+      slides: { perView: 4, spacing: 30 },
+      breakpoints: {
+        "(max-width: 1199px)": {
+          slides: { perView: 3, spacing: 30 },
+        },
+        "(max-width: 991px)": {
+          slides: { perView: 2, spacing: 20 },
+        },
+        "(max-width: 575px)": {
+          slides: { perView: 1, spacing: 20 },
+        },
       },
     },
-  },
-  [navigation]
-);
+    [navigation]
+  );
+}
+
+if (teachersList) {
+  const teachersSlider = new KeenSlider(
+    teachersList,
+    {
+      loop: true,
+      slides: { perView: 2, spacing: 30 },
+      breakpoints: {
+        "(max-width: 991px)": {
+          slides: { perView: 2, spacing: 20 },
+        },
+        "(max-width: 767px)": {
+          slides: { perView: 1, spacing: 20 },
+        },
+        "(max-width: 575px)": {
+          slides: { perView: 1, spacing: 20 },
+        },
+      },
+    },
+    [navigation]
+  );
+}

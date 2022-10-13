@@ -1,0 +1,164 @@
+.section__teachers .teachers__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 991px) {
+  .section__teachers .teachers__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ************************ */
+
+.section__teacher {
+  margin-top: 120px;
+}
+
+.wrapper__teacher {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 66px;
+  grid-template-areas:
+    'imgTeacher h2Teacher'
+    'imgTeacher otherTeacher';
+  margin-bottom: 60px;
+}
+
+.wrapper__teacher h2 {
+  grid-area: h2Teacher;
+  margin-bottom: 20px;
+}
+
+.wrapper__teacher img {
+  grid-area: imgTeacher;
+  max-height: 332px;
+  min-height: 294px;
+  height: 100%;
+}
+
+.wrapper__teacher .inner__teacher {
+  grid-area: otherTeacher;
+}
+
+.wrapper__teacher h3 {
+  color: var(--orange-dark);
+  margin-bottom: 10px;
+}
+
+.wrapper__teacher h4 {
+  margin-bottom: 40px;
+}
+
+.teacher__description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.wrapper__description-list h5 {
+  color: var(--gray-dark);
+  padding: 20px 30px;
+  background-color: var(--gray-light);
+  margin-bottom: 20px;
+}
+
+.description__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.description__item {
+  margin-bottom: 30px;
+}
+
+.description__item p::first-letter {
+  padding-left: 20px;
+  background: url('../images/dot.svg') no-repeat center left;
+}
+
+
+@media (max-width: 1199px) {
+  .section__teacher {
+    margin-top: 10vw;
+  }
+}
+
+@media (max-width: 991px) {
+  .wrapper__teacher {
+    gap: 0 5vw;
+  }
+
+  .teacher__description {
+    grid-template-columns: 1fr;
+  }
+
+  .description__item {
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .wrapper__teacher {
+    grid-template-columns: auto;
+    gap: 0;
+    grid-template-areas:
+      ' h2Teacher'
+      'imgTeacher '
+      ' otherTeacher';
+    margin-bottom: 40px;
+  }
+
+  .wrapper__teacher h2 {
+    margin-bottom: 30px;
+  }
+
+  .wrapper__teacher .inner__teacher {
+    margin-top: 20px;
+  }
+
+  .wrapper__description-list h5 {
+    padding: 2.7vw 4vw;
+  }
+}
+
+@media (max-width: 575px) {
+  .section__teacher {
+    margin-top: 20px;
+  }
+
+  .section__teacher h3 {
+    font-size: 15px;
+  }
+
+  .section__teacher h4 {
+    font-size: 16px;
+  }
+
+  .wrapper__description-list h5 {
+    padding: 12px 14px;
+  }
+
+  .description__item p::first-letter {
+    padding-left: 15px;
+  }
+
+}
+
+.teachers--slider .wrapper__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teachers--slider .wrapper__title h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.teachers--slider .wrapper__title {
+  margin-bottom: 60px;
+}

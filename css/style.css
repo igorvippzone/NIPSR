@@ -170,27 +170,12 @@
   fill: var(--orange);
 }
 
-.dots {
+.direction .dots {
   display: none;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 12px;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: var(--gray);
-  cursor: pointer;
 
-  transition: background-color .3s;
-}
-
-.dot--active {
-  background-color: var(--orange);
-}
-
-.dot {
+.direction .dot {
   background-color: var(--orange);
 }
 
@@ -199,25 +184,25 @@
 }
 
 @media (max-width: 1199px) {
-  .dots {
+  .direction .dots {
     display: flex;
   }
 
-  .dot:nth-child(4),
-  .dot:nth-child(3) {
+  .direction .dot:nth-child(4),
+  .direction .dot:nth-child(3) {
     display: none;
   }
 }
 
 @media (max-width: 991px) {
-  .dot:nth-child(3) {
+  .direction .dot:nth-child(3) {
     display: block;
   }
 }
 
 @media (max-width: 575px) {
 
-  .dot:nth-child(4) {
+  .direction .dot:nth-child(4) {
     display: block;
   }
 

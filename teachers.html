@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>НИПСР</title>
+  <title>НИПСР-Преподаватели </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,26 +13,26 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css" />
-  
+
   <link rel="stylesheet" href="css/shared.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/teachers.css">
 
 
 </head>
 
 <body>
+
   <header id="header" class="header">
     <div class="container">
       <div class="header__wrapper">
         <div class="logo">
-          <a href="#">
+          <a href="index.html">
             <img src="images/logo.png" alt="logo">
           </a>
         </div>
 
         <div class="logo__title">
-          <a href="#">
+          <a href="index.html">
             Национальный институт психологии и социальной работы
           </a>
         </div>
@@ -49,8 +49,8 @@
             <li>Повышение квалификации</li>
           </ul>
         </nav>
-
         <h5 class="phone"><a href="tel:88005003973">8 (800) 500-39-73</a></h5>
+
 
         <button class="login__button">Вход в СДО</button>
 
@@ -95,287 +95,214 @@
 
 
   <main class="main">
-    <section class="section__main-content">
+
+    <div class="section__breadcrumbs">
       <div class="container">
-        <div class="main__wrapper">
-          <div class="main-content">
-            <h1>
-              <span class="title--black">Смени профессию</span>
-              <span class="title--gray">Научись новому</span>
-              <span class="title--gray">Стань психологом</span>
-            </h1>
-            <p class="main__subtitle ">Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua
-            </p>
-            <div class="mobile main-bg"></div>
-            <button class="btn main__btn" href="#" data-open-popup="startEducation">Начать обучение</button>
-          </div>
-          <div class="main-bg"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section__direction">
-      <div class="container">
-        <div class="direction">
-          <h2 class="direction__title">Направления</h2>
-          <ul class="keen-slider" id="direction__list">
-            <li class="direction__item keen-slider__slide numer-slide1">
-              <img class="direction-item__image" src="images/directions/direction-1.jpg" alt="">
-              <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
-              <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod</p>
-              <div class="direction-item__inner">
-                <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 0H0V21L7.5 18L15 21V0Z" />
-                </svg>
-                <h5>5 курсов</h5>
-
-              </div>
-
-
-              <div class="wrapper-arrow">
-                <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                </svg>
-              </div>
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <p class="subtext">
+                <a href="index.html">Главная</a>
+              </p>
             </li>
-
-            <li class="direction__item keen-slider__slide numer-slide2">
-              <img class="direction-item__image" src="images/directions/direction-2.jpg" alt="">
-              <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
-              <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod</p>
-              <div class="direction-item__inner">
-                <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 0H0V21L7.5 18L15 21V0Z" />
-                </svg>
-                <h5>5 курсов</h5>
-
-              </div>
-
-              <div class="wrapper-arrow">
-                <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                </svg>
-              </div>
-            </li>
-
-            <li class="direction__item keen-slider__slide numer-slide3">
-              <img class="direction-item__image" src="images/directions/direction-3.jpg" alt="">
-              <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
-              <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod</p>
-              <div class="direction-item__inner">
-                <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 0H0V21L7.5 18L15 21V0Z" />
-                </svg>
-                <h5>5 курсов</h5>
-
-              </div>
-
-              <div class="wrapper-arrow">
-                <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                </svg>
-              </div>
-            </li>
-
-            <li class="direction__item keen-slider__slide numer-slide4">
-              <img class="direction-item__image" src="images/directions/direction-4.jpg" alt="">
-              <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
-              <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod</p>
-              <div class="direction-item__inner">
-                <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 0H0V21L7.5 18L15 21V0Z" />
-                </svg>
-                <h5>5 курсов</h5>
-
-              </div>
-
-
-              <div class="wrapper-arrow">
-                <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                </svg>
-              </div>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section__popular-courses">
-      <div class="container">
-        <div class="popular-courses">
-          <!-- <div class="title__wrapper"> -->
-          <h2 class="popular-courses__title">Популярные курсы</h2>
-          <a href="#" class="popular-courses__link">Смотреть все курсы</a>
-          <!-- </div> -->
-
-          <ul class="popular-courses__list">
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-            <li class="popular-courses__item">
-              <h5 class="popular-item__title">«Семейное и детское психологическое консультирование. Системная семейная
-                психотерапия» (450 ч.)</h5>
-              <a href="#" class="btn-transparent">Подробнее</a>
-            </li>
-
-
-
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section__help-choice">
-      <div class="container">
-        <div class="help-choice">
-          <h2 class="help-choice__title">Помочь с выбором?</h2>
-          <h5 class="help-choice__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et
-            dolore magna aliqua</h5>
-          <button href="#" class="btn" data-open-popup="callback">Заказать звонок</и>
-        </div>
-      </div>
-    </section>
-
-    <section class="section__psychology">
-      <div class="container">
-        <div class="psychology__wrapper">
-          <div class="psychology-bg"></div>
-
-          <div class="psychology__content">
-            <h2>Только лучшие знания в психологии</h2>
-            <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-            <button href="#" class="btn" data-open-popup="startEducation">Начать обучение</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section__advantages">
-      <div class="container">
-        <div class="advantages">
-          <h2 class="advantages__title">Преимущества обучения</h2>
-
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <div class="advantage-icon"></div>
-              <h4>Lorem ipsum dolor sit amet consectetur</h4>
-              <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-            </li>
-
-            <li class="advantages__item">
-              <div class="advantage-icon"></div>
-              <h4>Lorem ipsum dolor sit amet consectetur</h4>
-              <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-            </li>
-            <li class="advantages__item">
-              <div class="advantage-icon"></div>
-              <h4>Lorem ipsum dolor sit amet consectetur</h4>
-              <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+            <li class="breadcrumbs__item">
+              <p class="subtext">
+                <a href="#">Преподаватели</a>
+              </p>
             </li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="section__application">
+    <div class="section__main-title">
       <div class="container">
-        <div class="application">
-          <h2>Не откладывайте будущую профессию на потом</h2>
-          <h4>Обучайтесь выгодно с рассрочкой 0% без участия банка</h4>
-          <form action="" class="form-application">
+        <div class="main-title">
+          <h2>Преподаватели</h2>
+          <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua</p>
+        </div>
+      </div>
+    </div>
 
-            <div class="input__wrapper">
-              <div class="custom-input">
-                <input id="name" name="name" type="text" placeholder="Ваше имя" />
-                <label for="name" class="label-inner">Ваше имя</label>
-              </div>
 
-              <div class="custom-input">
-                <input id="phone" name="phone" type="tel" placeholder="Телефон" />
-                <label for="phone" class="label-inner">Телефон</label>
-                <p class="message">Ошибка</p>
+    <section class="section__teachers last">
+      <div class="container">
+        <ul class="teachers__list">
+          <li class="teachers__item">
+            <img src="images/teachers/teacher-1.jpg" alt="Преподаватель">
+            <div class="teachers-item__description">
+              <h4>
+                <a class="teachers-item__link" href="teacher.html"> Ева Поплавская</a>
+              </h4>
+              <p class="description__education subtext ">Кандидат психологический наук</p>
+              <p class="subtext">Психолог-практик, практикует в методе транзактного анализа</p>
+
+              <div class="teachers-item__footer">
+                <p>подробнее</p>
+                <div class="wrapper-arrow">
+                  <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
               </div>
             </div>
-            <p class="explanation">Нажимая кнопку «Заявка на рассрочку» я даю согласие на обработку персональных данных
-            </p>
-            <button href="#" class="btn">Заявка на рассрочку</button>
-          </form>
+          </li>
 
-        </div>
+          <li class="teachers__item">
+            <img src="images/teachers/teacher-2.jpg" alt="Преподаватель">
+            <div class="teachers-item__description">
+              <h4>
+                <a class="teachers-item__link" href="#"> Александр Стручаев</a>
+              </h4>
+              <p class="description__education subtext ">Магистр Психологии, социальный педагог</p>
+              <p class="subtext">Специализируется на работе с ограничивающими убеждениями, самооценкой и эмоциональным
+                интеллектом</p>
+
+              <div class="teachers-item__footer">
+                <p>подробнее</p>
+                <div class="wrapper-arrow">
+                  <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="teachers__item">
+            <img src="images/teachers/teacher-3.jpg" alt="Преподаватель">
+            <div class="teachers-item__description">
+              <h4>
+                <a class="teachers-item__link" href="#">Екатерина Милютина</a>
+              </h4>
+              <p class="description__education subtext ">Доктор психологических наук</p>
+              <p class="subtext">Тренер, практический психолог, профессор кафедры психологии развития
+                КНУ им. Т. Шевченко</p>
+
+              <div class="teachers-item__footer">
+                <p>подробнее</p>
+                <div class="wrapper-arrow">
+                  <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="teachers__item">
+            <img src="images/teachers/teacher-4.jpg" alt="Преподаватель">
+            <div class="teachers-item__description">
+              <h4>
+                <a class="teachers-item__link" href="#">Алла Пилипюк</a>
+              </h4>
+              <p class="description__education subtext ">Семейный психолог с 2002 года</p>
+              <p class="subtext">Эксперт в проработке прошлого, автор и тренер программ «Фаза Роста»</p>
+
+              <div class="teachers-item__footer">
+                <p>подробнее</p>
+                <div class="wrapper-arrow">
+                  <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="teachers__item">
+            <img src="images/teachers/teacher-5.jpg" alt="Преподаватель">
+            <div class="teachers-item__description">
+              <h4>
+                <a class="teachers-item__link" href="#">Анна Евстратова</a>
+              </h4>
+              <p class="description__education subtext ">Психолог</p>
+              <p class="subtext">Сертифицированный специалист по Организационным и Семейным расстановкам, коуч,
+                танцевально-двигательный терапевт</p>
+
+              <div class="teachers-item__footer">
+                <p>подробнее</p>
+                <div class="wrapper-arrow">
+                  <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="teachers__item">
+            <img src="images/teachers/teacher-6.jpg" alt="Преподаватель">
+            <div class="teachers-item__description">
+              <h4>
+                <a class="teachers-item__link" href="#">Ирина Токарева</a>
+              </h4>
+              <p class="description__education subtext ">Кандидат психологических наук</p>
+              <p class="subtext">Доцент РАНХиГС, кандидат психологических наук, сертифицированный преподаватель
+                ЭОТ межрегионального уровня</p>
+
+              <div class="teachers-item__footer">
+                <p>подробнее</p>
+                <div class="wrapper-arrow">
+                  <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="teachers__item">
+            <img src="images/teachers/teacher-7.jpg" alt="Преподаватель">
+            <div class="teachers-item__description">
+              <h4>
+                <a class="teachers-item__link" href="#">Наталия Поскребышева</a>
+              </h4>
+              <p class="description__education subtext ">Кандидат психологических наук</p>
+              <p class="subtext">Доцент кафедры возрастной психологии
+                МГУ им. М.В. Ломоносова. Член РПО</p>
+
+              <div class="teachers-item__footer">
+                <p>подробнее</p>
+                <div class="wrapper-arrow">
+                  <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="teachers__item">
+            <img src="images/teachers/teacher-8.jpg" alt="Преподаватель">
+            <div class="teachers-item__description">
+              <h4>
+                <a class="teachers-item__link" href="#">Юлия Дамочкина</a>
+              </h4>
+              <p class="description__education subtext ">Психолог практик</p>
+              <p class="subtext">Психолог, психоаналитик, семейный психолог, транзактный аналитик. Работает в частной
+                практике индивидуального и семейного консультирования</p>
+
+              <div class="teachers-item__footer">
+                <p>подробнее</p>
+                <div class="wrapper-arrow">
+                  <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -515,7 +442,7 @@
             <li class="nav-menu__item">
               <h3><a href="#">Сведения об организации</a></h3>
             </li>
-            <li class="nav-menu__item">
+            <li class="nav-menu__item ">
               <h3><a href="contacts.html">Контакты</a></h3>
             </li>
             <li class="nav-menu__item">
@@ -524,8 +451,8 @@
             <li class="nav-menu__item">
               <h3><a href="#">Поступающим</a></h3>
             </li>
-            <li class="nav-menu__item">
-              <h3><a href="teachers.html">Преподаватели</a></h3>
+            <li class="nav-menu__item active">
+              <h3><a href="#">Преподаватели</a></h3>
             </li>
             <li class="nav-menu__item">
               <h3><a href="about-us.html">О нас</a></h3>
@@ -591,7 +518,9 @@
   <div data-popup="startEducation" class="popup animate__animated">
     <div class="popup__content animate__faster animate__animated">
 
-      <button class="close__btn btn"></button>
+      <button class="close__btn btn">
+
+      </button>
       <div class="popup__inner">
         <h2>Записаться на обучение</h2>
         <h4>Оставьте свои контакты, мы свяжемся с вами
@@ -661,8 +590,6 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
-  <script src="js/sliders.js"></script>
   <script src="js/main.js"></script>
   <script src="js/search.js"></script>
 </body>
