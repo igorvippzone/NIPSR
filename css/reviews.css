@@ -1,0 +1,241 @@
+.main-title {
+  margin: 0;
+  border: none;
+}
+.section__filter{
+  margin-bottom: 60px;
+}
+.filter{
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 0 10px;
+  padding: 20px 0;
+  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+
+}
+
+.filter .wrapper__input{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+}
+.filter .wrapper__btn{
+  display: flex;
+  margin-left: auto;
+  align-self: center;
+  flex-shrink: 0;
+}
+.filter .btn-clear{
+  display: none;
+}
+
+.reviews__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+
+.wrapper__reviews-item {
+  display: grid;
+  gap: 5px 25px;
+  grid-template-columns: 1fr auto 300px;
+  grid-template-areas:
+    'rImage rDescription rCourse';
+  justify-content: space-between;
+
+  min-height: 279px;
+}
+
+.reviews-item__image {
+  grid-area: rImage;
+  width: 275px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.reviews-item__image img{
+  width: 100%;
+}
+
+.reviews-item__image.avatar {
+  background-color: var(--gray);
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: 60%, cover;
+}
+
+.reviews-item__image.avatar.avatar-1 {
+  background-image: url(../images//reviews/avatar-1.svg), url(../images/reviews/bg-1.svg);
+}
+.reviews-item__image.avatar.avatar-2 {
+  background-image: url(../images//reviews/avatar-2.svg), url(../images/reviews/bg-1.svg);
+}
+.reviews-item__image.avatar.avatar-3 {
+  background-image: url(../images//reviews/avatar-3.svg), url(../images/reviews/bg-1.svg);
+}
+.reviews-item__image.avatar.avatar-4 {
+  background-image: url(../images//reviews/avatar-4.svg), url(../images/reviews/bg-1.svg);
+}
+
+.review-item__description {
+  grid-area: rDescription;
+  padding: 20px 30px;
+  border: 1px solid var(--gray);
+}
+.review-item__description h5{
+  margin-bottom: 10px;
+}
+
+.wrapper__title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.wrapper__title.mobile {
+  display: none;
+  grid-area: rTitle;
+}
+
+.wrapper__title .city {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.review-item__course {
+  grid-area: rCourse;
+  background-color: var(--orange);
+  padding: 30px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.review-item__course .btn-transparent{
+  align-self: flex-start;
+}
+
+.reviews__item .btn.mobile{
+  display: none;
+}
+
+.reviews-item__link{
+  text-decoration: none;
+  display: block;
+
+  transition: color .3s;
+}
+.reviews-item__link:hover,
+.reviews-item__link:active{
+  color: var(--orange-dark);
+}
+@media (max-width: 1199px) {
+  .filter {
+    gap: 40px;
+  }
+
+  .wrapper__reviews-item {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'rImage rDescription'
+      'rCourse rCourse';
+    justify-content: space-between;
+
+    min-height: inherit;
+  }
+}
+
+@media (max-width: 767px) {
+  .section__filter{
+    margin-bottom: 30px;
+  }
+  .filter{
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0;
+  }
+  .filter .wrapper__btn{
+
+    margin-left: 0;
+    align-self: flex-start;
+    flex-shrink: 0;
+    gap: 16px;
+  }
+  .filter .btn-clear{
+    display: block;
+  }
+  .filter .wrapper__input{
+
+    gap: 12px;
+  
+  }
+  .reviews__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviews__item .review-item__course{
+    display: none;
+  }
+  .reviews__item .btn.mobile{
+    display: block;
+  }
+
+  .wrapper__title .city {
+    font-size: 15px;
+  }
+
+  .wrapper__reviews-item {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      'rImage rTitle'
+      'rDescription rDescription';
+    justify-content: space-between;
+    border: 1px solid var(--gray);
+    padding: 20px;
+    gap: 20px;
+    margin-bottom: 12px;
+  }
+
+  .review-item__description {
+    border: none;
+    padding: 0;
+  }
+
+  .review-item__description h5 {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  .wrapper__title h4{
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 5px;
+  }
+
+  .review-item__course {
+    display: none;
+  }
+
+  .reviews-item__image {
+    width: 26vw;
+    height: 26vw;
+  }
+
+  .wrapper__title {
+    display: none;
+  }
+
+  .wrapper__title.mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 575px) {}

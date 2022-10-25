@@ -79,4 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 500);
     }
   });
+
+  const toggleFilterBtn = document.getElementById('toggleFilter');
+  const filter = document.querySelector('.filter')
+
+  toggleFilterBtn.addEventListener('click', (e) => {
+    e.target.classList.toggle('active')
+    filter.classList.toggle('active')
+    console.log(filter);
+  })
 });

@@ -51,10 +51,14 @@ function navigation(slider) {
       return;
     }
     dots = createDiv("dots");
-    slider.track.details.slides.forEach((_e, idx) => {
-      var dot = createDiv("dot");
-      dot.addEventListener("click", () => slider.moveToIdx(idx));
-      dots.appendChild(dot);
+
+    const slideView = slider.options.slides.perView - 1;
+    slider.track.details.slides.forEach((_e, idx, arr) => {
+      // if (arr.length - slideView > idx) {
+        var dot = createDiv("dot");
+        dot.addEventListener("click", () => slider.moveToIdx(idx));
+        dots.appendChild(dot);
+      // }
     });
     wrapper.appendChild(dots);
   }

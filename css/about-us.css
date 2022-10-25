@@ -228,6 +228,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  counter-reset: number;
 }
 
 .how-training__item {
@@ -240,7 +242,7 @@
   text-align: center;
 }
 
-.how-training__current {
+.how-training__current { 
   width: 80px;
   height: 80px;
   background: url(../images/about-us/how-training-bg.png) no-repeat center/ contain;
@@ -251,6 +253,14 @@
   font-size: 36px;
   line-height: 140%;
   margin-bottom: 30px;
+
+  position: relative;
+}
+
+.how-training__current::before{
+  content: "0" counter(number);
+	counter-increment: number;
+  position: absolute;
 }
 
 /* Удалить после решения какую картинку оставлять */

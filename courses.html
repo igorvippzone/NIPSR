@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>НИПСР-Преподаватели </title>
+  <title>НИПСР-Курсы</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +13,9 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.2/keen-slider.min.css" />
 
   <link rel="stylesheet" href="css/shared.css">
-  <link rel="stylesheet" href="css/teachers.css">
+  <link rel="stylesheet" href="css/courses.css">
 
 
 </head>
@@ -46,7 +45,7 @@
 
         <nav class="nav">
           <ul>
-            <li><a href="courses.html">Курсы</a></li>
+            <li><a class="active" href="#">Курсы</a></li>
             <li><a href="#">Повышение квалификации</a></li>
           </ul>
         </nav>
@@ -108,12 +107,7 @@
             </li>
             <li class="breadcrumbs__item">
               <p class="subtext">
-                <a href="teachers.html">Преподаватели</a>
-              </p>
-            </li>
-            <li class="breadcrumbs__item">
-              <p class="subtext">
-                <a href="#">Ева Поплавская</a>
+                <a href="#">Курсы</a>
               </p>
             </li>
           </ul>
@@ -121,176 +115,336 @@
       </div>
     </div>
 
-    <section class="section__teacher">
+    <div class="section__main-title">
       <div class="container">
-        <div class="teacher">
-          <div class="wrapper__teacher">
-            <h2>Ева Поплавская </h2>
-            <img src="images/teachers/teacher-1.jpg" alt="">
-            <div class="inner__teacher">
-              <h3>Практикующий психолог </h3>
-              <h4>Стаж научной и практической работы – с 2006 года</h4>
-              <p class="subtext">Емельянова Мария Геннадьевна в совершенстве владеет методами комплексной диагностики
-                индивидуально-психологических особенностей личности, психологической коррекции с применением арт-терапии
-                и
-                метафорических ассоциативных карт, методами клинической диагностики и психотерапевтическими методами в
-                гештальт-подходе, является автором программы «Психологическая коррекция кризисных состояний».
-              </p>
-            </div>
+        <div class="main-title">
+          <h2>Переподготовка и повышение квалификации по психологии </h2>
+          <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section__courses last">
+      <div class="container">
+        <div class="courses">
+          <div class="wrapper__filter">
+            <button id="toggleFilter" class="toggle__filter-btn">Фильтры</button>
+            <form class="filter animate__faster animate__animated animate__fadeIn">
+              <div class="filter__block">
+                <h5>Скоро стартуют</h5>
+                <div class="custom-choice">
+                  <input id="browser1" type="checkbox">
+                  <label for="browser1">Новые курсы</label>
+                  <a href="#">(17)</a>
+                </div>
+              </div>
+              <div class="filter__block">
+                <h5>Тип обучения</h5>
+                <div class="custom-choice">
+                  <input name="type-training" value="Переподготовка" id="browser2" type="radio">
+                  <label for="browser2">Переподготовка</label>
+                  <a href="#">(20)</a>
+                </div>
+                <div class="custom-choice">
+                  <input name="type-training" value="Повышение квалификации" id="browser3" type="radio">
+                  <label for="browser3">Повышение квалификации</label>
+                  <a href="#">(19)</a>
+                </div>
+              </div>
+              <div class="filter__block">
+                <h5>Направления</h5>
+                <div class="custom-choice">
+                  <input id="browser4" type="checkbox">
+                  <label for="browser4">Семейная психология</label>
+                  <a href="#">(6)</a>
+                </div>
+                <div class="custom-choice">
+                  <input id="browser5" type="checkbox">
+                  <label for="browser5">Психосоматика</label>
+                  <a href="#">(6)</a>
+                </div>
+                <div class="custom-choice">
+                  <input id="browser6" type="checkbox">
+                  <label for="browser6">Детская психология</label>
+                  <a href="#">(6)</a>
+                </div>
+                <div class="custom-choice">
+                  <input id="browser7" type="checkbox">
+                  <label for="browser7">Социальная психология</label>
+                  <a href="#">(6)</a>
+                </div>
+              </div>
+              <div class="filter__block">
+                <h5>Длительность</h5>
+                <div class="custom-range" id="duration" data-min-range="0" data-max-range="12" data-step='2'></div>
+              </div>
+              <!--   <div class="track">
+                <div class="value-between"></div>
+                <div class="output o0">
+                  <div class="thumb t0"></div>
+                  <div class="view v0">1 мес</div>
+                </div>
+               
+                    <div class="output o1">
+                      <div class="output o1"> </div>
+                      <div class="thumb t1"></div>
+                    </div> 
+                  </div> -->
+            </form>
 
           </div>
-          <div class="teacher__description">
-            <div class="wrapper__description-list">
-              <h5>Образование:</h5>
-              <ul class="description__list">
-                <li class="description__item">
-                  <p class="subtext">Академия права и управления ФСИН России (г. Рязань), факультет психологии,
-                    квалификация «Психолог. Преподаватель психологии», специальность – юридическая психология (2006 г.);
-                  </p>
-                </li>
-                <li class="description__item">
-                  <p class="subtext">повышение квалификации по направлению «Формирование и гештальт-терапия
-                    психосоматических расстройств» (2014 г.);
-                  </p>
-                </li>
-                <li class="description__item">
-                  <p class="subtext">повышение квалификации по направлению «Гештальт-терапевт» (2016 г.);
-                  </p>
-                </li>
-                <li class="description__item">
-                  <p class="subtext">повышение квалификации по направлению «Ведущий тренинговых программ на базе
-                    метафорических карт» (2017 г.);
-                  </p>
-                </li>
-                <li class="description__item">
-                  <p class="subtext">повышение квалификации по направлению «Клиническая психология с основами
-                    психотерапии» (2018 г.).</p>
-                </li>
-              </ul>
-            </div>
 
-            <div class="wrapper__description-list">
-              <h5>Опыт научно-практической деятельности:</h5>
-              <ul class="description__list">
-                <li class="description__item">
-                  <p class="subtext">организационный психолог;</p>
-                </li>
-                <li class="description__item">
-                  <p class="subtext">практикующий психолог;</p>
-                </li>
-                <li class="description__item">
-                  <p class="subtext">преподаватель психологии.
+          <ul class="courses__list">
+            <li class="courses__item">
+              <img src="images/courses/course-1.jpg" alt="">
+              <div class="courses-item__description">
+                <div class="description__header">
+                  <p class="subtext courses-item__retraining">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
+                    </svg>
+                    <span>Переподготовка</span>
                   </p>
-                </li>
-              </ul>
-            </div>
-          </div>
+                  <p class="subtext course-type --hit">Хит продаж</p>
+                </div>
+                <h5 class="title">
+                  <a href="#">АРТ-терапия в практике психолога с присвоением квалификации
+                    «Арт-терапевт»</a>
+                </h5>
+                <div class="description__footer">
+                  <div class="wrapper__hours">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10" cy="10" r="10" />
+                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
+                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
+                    </svg>
+                    <h5>336 часов</h5>
+                    <p class="subtext course-type --hit mobile">Хит продаж</p>
+                  </div>
+                  <div class="wrapper__price">
+                    <p class="text old-price">22 900 ₽</p>
+                    <h5 class="price">13 500 ₽</h5>
+                  </div>
+                  <div class="wrapper-arrow">
+                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
 
+            <li class="courses__item">
+              <img src="images/courses/course-1.jpg" alt="">
+              <div class="courses-item__description">
+                <div class="description__header">
+                  <p class="subtext courses-item__retraining">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
+                    </svg>
+                    <span>Переподготовка</span>
+                  </p>
+                  <p class="subtext course-type --hit">Хит продаж</p>
+                </div>
+                <h5 class="title">
+                  <a href="#">АРТ-терапия в практике психолога с присвоением квалификации
+                    «Арт-терапевт»</a>
+                </h5>
+                <div class="description__footer">
+                  <div class="wrapper__hours">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10" cy="10" r="10" />
+                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
+                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
+                    </svg>
+                    <h5>336 часов</h5>
+                    <p class="subtext course-type --hit mobile">Хит продаж</p>
+                  </div>
+                  <div class="wrapper__price">
+                    <p class="text old-price">22 900 ₽</p>
+                    <h5 class="price">13 500 ₽</h5>
+                  </div>
+                  <div class="wrapper-arrow">
+                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="courses__item">
+              <img src="images/courses/course-1.jpg" alt="">
+              <div class="courses-item__description">
+                <div class="description__header">
+                  <p class="subtext courses-item__retraining">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
+                    </svg>
+                    <span>Переподготовка</span>
+                  </p>
+                  <p class="subtext course-type --hit">Хит продаж</p>
+                </div>
+                <h5 class="title">
+                  <a href="#">АРТ-терапия в практике психолога с присвоением квалификации
+                    «Арт-терапевт»</a>
+                </h5>
+                <div class="description__footer">
+                  <div class="wrapper__hours">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10" cy="10" r="10" />
+                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
+                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
+                    </svg>
+                    <h5>336 часов</h5>
+                    <p class="subtext course-type --hit mobile">Хит продаж</p>
+                  </div>
+                  <div class="wrapper__price">
+                    <p class="text old-price">22 900 ₽</p>
+                    <h5 class="price">13 500 ₽</h5>
+                  </div>
+                  <div class="wrapper-arrow">
+                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="courses__item">
+              <img src="images/courses/course-1.jpg" alt="">
+              <div class="courses-item__description">
+                <div class="description__header">
+                  <p class="subtext courses-item__retraining">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
+                    </svg>
+                    <span>Переподготовка</span>
+                  </p>
+                  <p class="subtext course-type --hit">Хит продаж</p>
+                </div>
+                <h5 class="title">
+                  <a href="#">АРТ-терапия в практике психолога с присвоением квалификации
+                    «Арт-терапевт»</a>
+                </h5>
+                <div class="description__footer">
+                  <div class="wrapper__hours">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10" cy="10" r="10" />
+                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
+                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
+                    </svg>
+                    <h5>336 часов</h5>
+                    <p class="subtext course-type --hit mobile">Хит продаж</p>
+                  </div>
+                  <div class="wrapper__price">
+                    <p class="text old-price">22 900 ₽</p>
+                    <h5 class="price">13 500 ₽</h5>
+                  </div>
+                  <div class="wrapper-arrow">
+                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="courses__item">
+              <img src="images/courses/course-1.jpg" alt="">
+              <div class="courses-item__description">
+                <div class="description__header">
+                  <p class="subtext courses-item__retraining">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
+                    </svg>
+                    <span>Переподготовка</span>
+                  </p>
+                  <p class="subtext course-type --hit">Хит продаж</p>
+                </div>
+                <h5 class="title">
+                  <a href="#">АРТ-терапия в практике психолога с присвоением квалификации
+                    «Арт-терапевт»</a>
+                </h5>
+                <div class="description__footer">
+                  <div class="wrapper__hours">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10" cy="10" r="10" />
+                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
+                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
+                    </svg>
+                    <h5>336 часов</h5>
+                    <p class="subtext course-type --hit mobile">Хит продаж</p>
+                  </div>
+                  <div class="wrapper__price">
+                    <p class="text old-price">22 900 ₽</p>
+                    <h5 class="price">13 500 ₽</h5>
+                  </div>
+                  <div class="wrapper-arrow">
+                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="courses__item">
+              <img src="images/courses/course-1.jpg" alt="">
+              <div class="courses-item__description">
+                <div class="description__header">
+                  <p class="subtext courses-item__retraining">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
+                    </svg>
+                    <span>Переподготовка</span>
+                  </p>
+                  <p class="subtext course-type --hit">Хит продаж</p>
+                </div>
+                <h5 class="title">
+                  <a href="#">АРТ-терапия в практике психолога с присвоением квалификации
+                    «Арт-терапевт»</a>
+                </h5>
+                <div class="description__footer">
+                  <div class="wrapper__hours">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10" cy="10" r="10" />
+                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
+                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
+                    </svg>
+                    <h5>336 часов</h5>
+                    <p class="subtext course-type --hit mobile">Хит продаж</p>
+                  </div>
+                  <div class="wrapper__price">
+                    <p class="text old-price">22 900 ₽</p>
+                    <h5 class="price">13 500 ₽</h5>
+                  </div>
+                  <div class="wrapper-arrow">
+                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
         </div>
       </div>
     </section>
 
 
-    <section class="section__teachers--slider  last">
-      <div class="container">
-        <div class="teachers--slider ">
-          <h1>Тут вопрос по макету</h1>
-          <div class="wrapper__title">
-            <h2>Еще преподаватели</h2>
-            <a class="link" href="teachers.html">Смотреть всех</a>
-          </div>
-
-
-          <div class="wrapper__teachers-slider">
-            <ul class="teachers__list--slider teachers__list  keen-slider" id="teachers__list">
-              <li class="teachers__item keen-slider__slide numer-slide1">
-                <img src="images/teachers/teacher-1.jpg" alt="Преподаватель">
-                <div class="teachers-item__description">
-                  <h4>
-                    <a class="teachers-item__link" href="#"> Ева Поплавская</a>
-                  </h4>
-                  <p class="description__education subtext ">Кандидат психологический наук</p>
-                  <p class="subtext">Психолог-практик, практикует в методе транзактного анализа</p>
-
-                  <div class="teachers-item__footer">
-                    <p>подробнее</p>
-                    <div class="wrapper-arrow">
-                      <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <li class="teachers__item keen-slider__slide numer-slide2">
-                <img src="images/teachers/teacher-2.jpg" alt="Преподаватель">
-                <div class="teachers-item__description">
-                  <h4>
-                    <a class="teachers-item__link" href="#"> Ева Поплавская</a>
-                  </h4>
-                  <p class="description__education subtext ">Кандидат психологический наук</p>
-                  <p class="subtext">Психолог-практик, практикует в методе транзактного анализа</p>
-
-                  <div class="teachers-item__footer">
-                    <p>подробнее</p>
-                    <div class="wrapper-arrow">
-                      <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="teachers__item keen-slider__slide numer-slide3">
-                <img src="images/teachers/teacher-3.jpg" alt="Преподаватель">
-                <div class="teachers-item__description">
-                  <h4>
-                    <a class="teachers-item__link" href="#"> Ева Поплавская</a>
-                  </h4>
-                  <p class="description__education subtext ">Кандидат психологический наук</p>
-                  <p class="subtext">Психолог-практик, практикует в методе транзактного анализа</p>
-
-                  <div class="teachers-item__footer">
-                    <p>подробнее</p>
-                    <div class="wrapper-arrow">
-                      <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="teachers__item keen-slider__slide numer-slide4">
-                <img src="images/teachers/teacher-4.jpg" alt="Преподаватель">
-                <div class="teachers-item__description">
-                  <h4>
-                    <a class="teachers-item__link" href="#"> Ева Поплавская</a>
-                  </h4>
-                  <p class="description__education subtext ">Кандидат психологический наук</p>
-                  <p class="subtext">Психолог-практик, практикует в методе транзактного анализа</p>
-
-                  <div class="teachers-item__footer">
-                    <p>подробнее</p>
-                    <div class="wrapper-arrow">
-                      <svg width="20" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
   </main>
 
 
@@ -406,7 +560,7 @@
       <div class="popup-menu__wrapper">
         <nav class="nav">
           <ul>
-            <li><a href="courses.html">Курсы</a></li>
+            <li><a class="active" href="#">Курсы</a></li>
             <li><a href="#">Повышение квалификации</a></li>
           </ul>
         </nav>
@@ -437,7 +591,7 @@
             <li class="nav-menu__item">
               <h3><a href="#">Поступающим</a></h3>
             </li>
-            <li class="nav-menu__item">
+            <li class="nav-menu__item ">
               <h3><a href="teachers.html">Преподаватели</a></h3>
             </li>
             <li class="nav-menu__item">
@@ -576,11 +730,9 @@
     </div>
   </div>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.2/keen-slider.min.js"></script>
-  <script src="js/sliders.js"></script>
   <script src="js/main.js"></script>
   <script src="js/search.js"></script>
+  <script src="js/custom-range.js"></script>
 </body>
 
 </html>
