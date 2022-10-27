@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>НИПСР-Курсы</title>
+  <title>НИПСР-«Предоставление психологических услуг в социальной сфере» с присвоением квалификации
+    «Психолог в социальной сфере»</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
   <link rel="stylesheet" href="css/shared.css">
-  <link rel="stylesheet" href="css/courses.css">
-
-
+  <link rel="stylesheet" href="css/course.css">
 </head>
 
 <body>
@@ -45,7 +44,7 @@
 
         <nav class="nav">
           <ul>
-            <li><a class="active" href="#">Курсы</a></li>
+            <li><a href="courses.html">Курсы</a></li>
             <li><a href="#">Повышение квалификации</a></li>
           </ul>
         </nav>
@@ -107,7 +106,13 @@
             </li>
             <li class="breadcrumbs__item">
               <p class="subtext">
-                <a href="#">Курсы</a>
+                <a href="courses.html">Курсы</a>
+              </p>
+            </li>
+            <li class="breadcrumbs__item">
+              <p class="subtext">
+                <a href="#">«Предоставление психологических услуг в социальной сфере» с присвоением квалификации
+                  «Психолог в социальной сфере»</a>
               </p>
             </li>
           </ul>
@@ -118,7 +123,8 @@
     <div class="section__main-title">
       <div class="container">
         <div class="main-title">
-          <h2>Переподготовка и повышение квалификации по психологии </h2>
+          <h2>«Предоставление психологических услуг в социальной сфере» с присвоением квалификации «Психолог
+            в социальной сфере» </h2>
           <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -126,324 +132,346 @@
       </div>
     </div>
 
-    <section class="section__courses last">
+    <section class="section__top-course">
+      <div class="section__parametrs-course">
+        <div class="container">
+          <ul class="parametrs-course__list">
+            <li class="parametrs-course__item">
+              <p class="text">Длительность обучения:</p>
+              <h4>4 месяца (560 часов)</h4>
+            </li>
+            <li class="parametrs-course__item">
+              <p class="text">Старт курса:</p>
+              <h4>24 Апреля 2021</h4>
+            </li>
+            <li class="parametrs-course__item">
+              <p class="text">Стоимость:</p>
+              <div class="parametrs-course__wrapper-price">
+                <h4 class="price"> <span class="old-price">16 900 ₽ </span><span class="new-price">13 500 ₽</span> </h4>
+                <h5 class="percent-price">-20%</h5>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section__training-format">
+        <div class="container">
+          <ul class="training-format__list">
+            <li class="training-format__item">
+              <div class="training-format__bg"></div>
+              <h5>Новый формат обучения</h5>
+            </li>
+            <li class="training-format__item">
+              <div class="training-format__bg"></div>
+              <h5>Новый формат обучения</h5>
+            </li>
+            <li class="training-format__item">
+              <div class="training-format__bg"></div>
+              <h5>Новый формат обучения</h5>
+            </li>
+            <li class="training-format__item">
+              <div class="training-format__bg"></div>
+              <h5>Новый формат обучения</h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section__start-learning">
+        <div class="container">
+          <form action="" class="start-learning">
+            <div class="input__wrapper">
+              <div class="custom-input">
+                <input id="name" name="name" type="text" placeholder="Ваше имя" />
+                <label for="name" class="label-inner">Ваше имя</label>
+              </div>
+
+              <div class="custom-input _error">
+                <input id="phone" name="phone" type="tel" placeholder="Телефон" />
+                <label for="phone" class="label-inner">Телефон</label>
+                <p class="message">Ошибка</p>
+              </div>
+            </div>
+
+
+            <p class="explanation">Нажимая кнопку «Начать обучение» я даю согласие на обработку персональных данных</p>
+            <button href="#" class="btn">Начать обучение</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__complete-training">
       <div class="container">
-        <div class="courses">
-          <div class="wrapper__filter">
-            <button id="toggleFilter" class="toggle__filter-btn">Фильтры</button>
-            <form class="filter animate__faster animate__animated animate__fadeIn">
-              <div class="filter__block">
-                <h5>Скоро стартуют</h5>
-                <div class="custom-choice">
-                  <input id="browser1" type="checkbox">
-                  <label for="browser1">Новые курсы</label>
-                  <a href="#">(17)</a>
-                </div>
-              </div>
-              <div class="filter__block">
-                <h5>Тип обучения</h5>
-                <div class="custom-choice">
-                  <input name="type-training" value="Переподготовка" id="browser2" type="radio">
-                  <label for="browser2">Переподготовка</label>
-                  <a href="#">(20)</a>
-                </div>
-                <div class="custom-choice">
-                  <input name="type-training" value="Повышение квалификации" id="browser3" type="radio">
-                  <label for="browser3">Повышение квалификации</label>
-                  <a href="#">(19)</a>
-                </div>
-              </div>
-              <div class="filter__block">
-                <h5>Направления</h5>
-                <div class="custom-choice">
-                  <input id="browser4" type="checkbox">
-                  <label for="browser4">Семейная психология</label>
-                  <a href="#">(6)</a>
-                </div>
-                <div class="custom-choice">
-                  <input id="browser5" type="checkbox">
-                  <label for="browser5">Психосоматика</label>
-                  <a href="#">(6)</a>
-                </div>
-                <div class="custom-choice">
-                  <input id="browser6" type="checkbox">
-                  <label for="browser6">Детская психология</label>
-                  <a href="#">(6)</a>
-                </div>
-                <div class="custom-choice">
-                  <input id="browser7" type="checkbox">
-                  <label for="browser7">Социальная психология</label>
-                  <a href="#">(6)</a>
-                </div>
-              </div>
-              <div class="filter__block">
-                <h5>Длительность</h5>
-                <div class="custom-range" id="duration" data-min-range="0" data-max-range="12" data-step='2'></div>
-              </div>
-              <!--   <div class="track">
-                <div class="value-between"></div>
-                <div class="output o0">
-                  <div class="thumb t0"></div>
-                  <div class="view v0">1 мес</div>
-                </div>
-               
-                    <div class="output o1">
-                      <div class="output o1"> </div>
-                      <div class="thumb t1"></div>
-                    </div> 
-                  </div> -->
-            </form>
+        <div class="complete-training">
+          <h2>Результат по окончанию обучения</h2>
+          <h3>Как изменится ваша жизнь после обучения</h3>
+          <ol class="how-training__list">
+            <li class="how-training__item">
+              <div class="how-training__current"></div>
+              <p class="text">Вы осваиваете интересную социально значимую профессию
+                с достойной оплатой труда</p>
+            </li>
+            <li class="how-training__item">
+              <div class="how-training__current"></div>
+              <p class="text">Вы осваиваете интересную социально значимую профессию
+                с достойной оплатой труда</p>
+            </li>
+            <li class="how-training__item">
+              <div class="how-training__current"></div>
+              <p class="text">Вы осваиваете интересную социально значимую профессию
+                с достойной оплатой труда</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-          </div>
-
-          <ul class="courses__list">
-            <li class="courses__item">
-              <img src="images/courses/course-1.jpg" alt="">
-              <div class="courses-item__description">
-                <div class="description__header">
-                  <p class="subtext courses-item__retraining">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
-                    </svg>
-                    <span>Переподготовка</span>
-                  </p>
-                  <p class="subtext course-type --hit">Хит продаж</p>
-                </div>
-                <h5 class="title">
-                  <a href="course.html">АРТ-терапия в практике психолога с присвоением квалификации
-                    «Арт-терапевт»</a>
-                </h5>
-                <div class="description__footer">
-                  <div class="wrapper__hours">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="10" />
-                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
-                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
-                    </svg>
-                    <h5>336 часов</h5>
-                    <p class="subtext course-type --hit mobile">Хит продаж</p>
-                  </div>
-                  <div class="wrapper__price">
-                    <p class="text old-price">22 900 ₽</p>
-                    <h5 class="price">13 500 ₽</h5>
-                  </div>
-                  <div class="wrapper-arrow">
-                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                    </svg>
-                  </div>
-                </div>
+    <section class="section__problem-course">
+      <div class="container">
+        <div class="problem-course">
+          <h2>3 проблемы курсов по психологии</h2>
+          <ul class="problem-course__list">
+            <li class="problem-course__item">
+              <div class="problem-icon"><svg width="20" height="19" viewBox="0 0 20 19" fill="#D1966B"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.4648 -0.000305176L19.2863 2.82812L12.9491 9.18078L19.3089 15.5406L16.4839 18.3656L10.1276 12.0092L3.76783 18.3845L0.946289 15.556L7.3026 9.18423L0.946489 2.82812L3.77148 0.00313367L10.1241 6.3558L16.4648 -0.000305176Z" />
+                </svg>
               </div>
+              <h4>Обучение оторвано от реальности</h4>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
             </li>
-
-            <li class="courses__item">
-              <img src="images/courses/course-1.jpg" alt="">
-              <div class="courses-item__description">
-                <div class="description__header">
-                  <p class="subtext courses-item__retraining">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
-                    </svg>
-                    <span>Переподготовка</span>
-                  </p>
-                  <p class="subtext course-type --hit">Хит продаж</p>
-                </div>
-                <h5 class="title">
-                  <a href="course.html">АРТ-терапия в практике психолога с присвоением квалификации
-                    «Арт-терапевт»</a>
-                </h5>
-                <div class="description__footer">
-                  <div class="wrapper__hours">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="10" />
-                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
-                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
-                    </svg>
-                    <h5>336 часов</h5>
-                    <p class="subtext course-type --hit mobile">Хит продаж</p>
-                  </div>
-                  <div class="wrapper__price">
-                    <p class="text old-price">22 900 ₽</p>
-                    <h5 class="price">13 500 ₽</h5>
-                  </div>
-                  <div class="wrapper-arrow">
-                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                    </svg>
-                  </div>
-                </div>
+            <li class="problem-course__item">
+              <div class="problem-icon"><svg width="20" height="19" viewBox="0 0 20 19" fill="#D1966B"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.4648 -0.000305176L19.2863 2.82812L12.9491 9.18078L19.3089 15.5406L16.4839 18.3656L10.1276 12.0092L3.76783 18.3845L0.946289 15.556L7.3026 9.18423L0.946489 2.82812L3.77148 0.00313367L10.1241 6.3558L16.4648 -0.000305176Z" />
+                </svg>
               </div>
+              <h4>Обучение оторвано от реальности</h4>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
             </li>
-            <li class="courses__item">
-              <img src="images/courses/course-1.jpg" alt="">
-              <div class="courses-item__description">
-                <div class="description__header">
-                  <p class="subtext courses-item__retraining">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
-                    </svg>
-                    <span>Переподготовка</span>
-                  </p>
-                  <p class="subtext course-type --hit">Хит продаж</p>
-                </div>
-                <h5 class="title">
-                  <a href="course.html">АРТ-терапия в практике психолога с присвоением квалификации
-                    «Арт-терапевт»</a>
-                </h5>
-                <div class="description__footer">
-                  <div class="wrapper__hours">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="10" />
-                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
-                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
-                    </svg>
-                    <h5>336 часов</h5>
-                    <p class="subtext course-type --hit mobile">Хит продаж</p>
-                  </div>
-                  <div class="wrapper__price">
-                    <p class="text old-price">22 900 ₽</p>
-                    <h5 class="price">13 500 ₽</h5>
-                  </div>
-                  <div class="wrapper-arrow">
-                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                    </svg>
-                  </div>
-                </div>
+            <li class="problem-course__item">
+              <div class="problem-icon"><svg width="20" height="19" viewBox="0 0 20 19" fill="#D1966B"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.4648 -0.000305176L19.2863 2.82812L12.9491 9.18078L19.3089 15.5406L16.4839 18.3656L10.1276 12.0092L3.76783 18.3845L0.946289 15.556L7.3026 9.18423L0.946489 2.82812L3.77148 0.00313367L10.1241 6.3558L16.4648 -0.000305176Z" />
+                </svg>
               </div>
+              <h4>Обучение оторвано от реальности</h4>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
             </li>
-            <li class="courses__item">
-              <img src="images/courses/course-1.jpg" alt="">
-              <div class="courses-item__description">
-                <div class="description__header">
-                  <p class="subtext courses-item__retraining">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
-                    </svg>
-                    <span>Переподготовка</span>
-                  </p>
-                  <p class="subtext course-type --hit">Хит продаж</p>
-                </div>
-                <h5 class="title">
-                  <a href="course.html">АРТ-терапия в практике психолога с присвоением квалификации
-                    «Арт-терапевт»</a>
-                </h5>
-                <div class="description__footer">
-                  <div class="wrapper__hours">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="10" />
-                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
-                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
-                    </svg>
-                    <h5>336 часов</h5>
-                    <p class="subtext course-type --hit mobile">Хит продаж</p>
-                  </div>
-                  <div class="wrapper__price">
-                    <p class="text old-price">22 900 ₽</p>
-                    <h5 class="price">13 500 ₽</h5>
-                  </div>
-                  <div class="wrapper-arrow">
-                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="courses__item">
-              <img src="images/courses/course-1.jpg" alt="">
-              <div class="courses-item__description">
-                <div class="description__header">
-                  <p class="subtext courses-item__retraining">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
-                    </svg>
-                    <span>Переподготовка</span>
-                  </p>
-                  <p class="subtext course-type --hit">Хит продаж</p>
-                </div>
-                <h5 class="title">
-                  <a href="course.html">АРТ-терапия в практике психолога с присвоением квалификации
-                    «Арт-терапевт»</a>
-                </h5>
-                <div class="description__footer">
-                  <div class="wrapper__hours">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="10" />
-                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
-                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
-                    </svg>
-                    <h5>336 часов</h5>
-                    <p class="subtext course-type --hit mobile">Хит продаж</p>
-                  </div>
-                  <div class="wrapper__price">
-                    <p class="text old-price">22 900 ₽</p>
-                    <h5 class="price">13 500 ₽</h5>
-                  </div>
-                  <div class="wrapper-arrow">
-                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="courses__item">
-              <img src="images/courses/course-1.jpg" alt="">
-              <div class="courses-item__description">
-                <div class="description__header">
-                  <p class="subtext courses-item__retraining">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19.2841 2.56534L10.2841 0.0390285C10.0987 -0.0130095 9.90127 -0.0130095 9.71587 0.0390285L0.715847 2.56534C0.291259 2.6845 0 3.05407 0 3.4736C0 3.89312 0.291259 4.2627 0.715847 4.38186L4.00009 5.30377L4.00016 9.5294C4.00009 9.53198 4.00009 9.53451 4.00009 9.53704C4.00009 11.355 7.23221 12 10 12C12.7678 12 15.9999 11.355 15.9999 9.53704C15.9999 9.53697 15.9999 9.53685 15.9999 9.53678C15.9999 9.53672 15.9999 9.53666 15.9999 9.5366V5.30371L18.0001 4.74228V11.0527C18.0001 11.5759 18.4478 12 19 12C19.5523 12 20 11.5759 20 11.0527V3.4736C19.9999 3.05407 19.7087 2.68457 19.2841 2.56534ZM10 1.93532L15.4803 3.4736L10 5.01188L4.51975 3.4736L10 1.93532ZM13.9999 9.37884C13.6305 9.65425 12.2014 10.1054 10 10.1054C7.79859 10.1054 6.36943 9.65425 6.00004 9.37884V5.86514L9.71587 6.90817C9.80861 6.93419 9.90427 6.9472 10 6.9472C10.0957 6.9472 10.1914 6.93419 10.2841 6.90817L14 5.86514L13.9999 9.37884Z" />
-                    </svg>
-                    <span>Переподготовка</span>
-                  </p>
-                  <p class="subtext course-type --hit">Хит продаж</p>
-                </div>
-                <h5 class="title">
-                  <a href="course.html">АРТ-терапия в практике психолога с присвоением квалификации
-                    «Арт-терапевт»</a>
-                </h5>
-                <div class="description__footer">
-                  <div class="wrapper__hours">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="10" />
-                      <rect y="50%" x="50%" width="7" height="1" fill="#fff" />
-                      <rect y="4" x="50%" width="1" height="6" fill="#fff" />
-                    </svg>
-                    <h5>336 часов</h5>
-                    <p class="subtext course-type --hit mobile">Хит продаж</p>
-                  </div>
-                  <div class="wrapper__price">
-                    <p class="text old-price">22 900 ₽</p>
-                    <h5 class="price">13 500 ₽</h5>
-                  </div>
-                  <div class="wrapper-arrow">
-                    <svg width="24" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </li>
-
           </ul>
         </div>
       </div>
     </section>
 
+    <section class="section__help-choice">
+      <div class="container">
+        <div class="help-choice">
+          <h2 class="help-choice__title">Помочь с выбором?</h2>
+          <h5 class="help-choice__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et
+            dolore magna aliqua</h5>
+          <button href="#" class="btn" data-open-popup="callback">Заказать звонок</и>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__who-course">
+      <div class="container">
+        <div class="who-course">
+          <h2>Курс для тех, кому нужны знания</h2>
+          <h3>Вы будете четко знать, что и как делать,
+            чтобы реализоваться в професии</h3>
+          <ul class="who-course__list">
+            <li class="who-course__item">
+              <div class="who-course__wrapper">
+                <img class="who-course__img" src="./images/course/who-course-1.jpg" alt="">
+                <div class="who-course__bg">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="#B1805C" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4.61523" width="2.76923" height="12" />
+                    <rect y="7.38477" width="2.76923" height="12" transform="rotate(-90 0 7.38477)" />
+                  </svg>
+                </div>
+              </div>
+
+              <h4>Lorem ipsum dolor sit amet consectetur</h4>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            </li>
+            <li class="who-course__item">
+              <div class="who-course__wrapper">
+                <img class="who-course__img" src="./images/course/who-course-2.jpg" alt="">
+                <div class="who-course__bg">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="#B1805C" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4.61523" width="2.76923" height="12" />
+                    <rect y="7.38477" width="2.76923" height="12" transform="rotate(-90 0 7.38477)" />
+                  </svg>
+                </div>
+              </div>
+
+              <h4>Lorem ipsum dolor sit amet consectetur</h4>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            </li>
+            <li class="who-course__item">
+              <div class="who-course__wrapper">
+                <img class="who-course__img" src="./images/course/who-course-3.jpg" alt="">
+                <div class="who-course__bg">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="#B1805C" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4.61523" width="2.76923" height="12" />
+                    <rect y="7.38477" width="2.76923" height="12" transform="rotate(-90 0 7.38477)" />
+                  </svg>
+                </div>
+              </div>
+
+              <h4>Lorem ipsum dolor sit amet consectetur</h4>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor . Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__programms-course">
+      <div class="container">
+        <div class="programm-course">
+          <h2>Курс для тех, кому нужны знания</h2>
+          <ul class="programm-course__table">
+            <li class="table-row">
+              <div class="table-cell table__title">
+                <h5>Нормативно-правовое обеспечение профессиональной деятельности психолога в социальной сфере.
+                  Профессиональный стандарт «Психолог в социальной сфере»</h5>
+              </div>
+              <div class="table-cell__wrapper">
+                <div class="table-cell">
+                  <div class="table-text clock"><span class="table-text__title">Часы:</span><span
+                      class="table-num">8</span></div>
+                  <div class="table-text lectures"><span class="table-text__title">Лекции:</span><span
+                      class="table-num">4</span></div>
+                </div>
+                <div class="table-cell">
+                  <div class="table-text tests"><span class="table-text__title">Тестирование:</span><span
+                      class="table-num">2</span></div>
+                  <div class="table-text practical"><span class="table-text__title">Практические занятия:</span><span
+                      class="table-num">2</span>
+                  </div>
+                </div>
+                <div class="table-cell">
+                  <div class="table-text certificate"><span class="table-text__title">Аттестация:</span><span
+                      class="table-num">3</span></div>
+                </div>
+              </div>
+            </li>
+            <li class="table-row">
+              <div class="table-cell table__title">
+                <h5>Общая психология</h5>
+              </div>
+              <div class="table-cell__wrapper">
+                <div class="table-cell">
+                  <div class="table-text clock"><span class="table-text__title">Часы:</span><span
+                      class="table-num">8</span></div>
+                  <div class="table-text lectures"><span class="table-text__title">Лекции:</span><span
+                      class="table-num">4</span></div>
+                </div>
+                <div class="table-cell">
+                  <div class="table-text tests"><span class="table-text__title">Тестирование:</span><span
+                      class="table-num">2</span></div>
+                  <div class="table-text practical"><span class="table-text__title">Практические занятия:</span><span
+                      class="table-num">2</span>
+                  </div>
+                </div>
+                <div class="table-cell">
+                  <div class="table-text certificate"><span class="table-text__title">Аттестация:</span><span
+                      class="table-num">3</span></div>
+                </div>
+              </div>
+
+            </li>
+            <li class="table-row">
+              <div class="table-cell table__title">
+                <h5>Психология личности</h5>
+              </div>
+              <div class="table-cell__wrapper">
+                <div class="table-cell">
+                  <div class="table-text clock"><span class="table-text__title">Часы:</span><span
+                      class="table-num">8</span></div>
+                  <div class="table-text lectures"><span class="table-text__title">Лекции:</span><span
+                      class="table-num">4</span></div>
+                </div>
+                <div class="table-cell">
+                  <div class="table-text tests"><span class="table-text__title">Тестирование:</span><span
+                      class="table-num">2</span></div>
+                  <div class="table-text practical"><span class="table-text__title">Практические занятия:</span><span
+                      class="table-num">2</span>
+                  </div>
+                </div>
+                <div class="table-cell">
+                  <div class="table-text certificate"><span class="table-text__title">Аттестация:</span><span
+                      class="table-num">3</span></div>
+                </div>
+              </div>
+            </li>
+            <li class="table-row">
+              <div class="table-cell table__title">
+                <h5>Введение специальности</h5>
+              </div>
+              <div class="table-cell__wrapper">
+                <div class="table-cell">
+                  <div class="table-text clock"><span class="table-text__title">Часы:</span><span
+                      class="table-num">8</span></div>
+                  <div class="table-text lectures"><span class="table-text__title">Лекции:</span><span
+                      class="table-num">4</span></div>
+                </div>
+                <div class="table-cell">
+                  <div class="table-text tests"><span class="table-text__title">Тестирование:</span><span
+                      class="table-num">2</span></div>
+                  <div class="table-text practical"><span class="table-text__title">Практические занятия:</span><span
+                      class="table-num">2</span>
+                  </div>
+                </div>
+                <div class="table-cell">
+                  <div class="table-text certificate"><span class="table-text__title">Аттестация:</span><span
+                      class="table-num">3</span></div>
+                </div>
+              </div>
+            </li>
+            <li class="table-row">
+              <div class="table-cell table__title">
+                <h5>Психология семьи</h5>
+              </div>
+              <div class="table-cell__wrapper">
+                <div class="table-cell">
+                  <div class="table-text clock"><span class="table-text__title">Часы:</span><span
+                      class="table-num">8</span></div>
+                  <div class="table-text lectures"><span class="table-text__title">Лекции:</span><span
+                      class="table-num">4</span></div>
+                </div>
+                <div class="table-cell">
+                  <div class="table-text tests"><span class="table-text__title">Тестирование:</span><span
+                      class="table-num">2</span></div>
+                  <div class="table-text practical"><span class="table-text__title">Практические занятия:</span><span
+                      class="table-num">2</span>
+                  </div>
+                </div>
+                <div class="table-cell">
+                  <div class="table-text certificate"><span class="table-text__title">Аттестация:</span><span
+                      class="table-num">3</span></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <a href="#" class="programm-course__link">Смотреть всю программу</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -732,7 +760,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/search.js"></script>
-  <script src="js/custom-range.js"></script>
+
 </body>
 
 </html>

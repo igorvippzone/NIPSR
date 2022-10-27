@@ -248,7 +248,7 @@
 
 @media (max-width: 1199px) {
   .main-title {
-    background: url(../images/bg-5.png) no-repeat center right/30%;
+    background-size: 30%;
   }
 
   .courses {
@@ -333,28 +333,31 @@
 }
 
 @media (max-width: 575px) {
-  .courses__item{
+  .courses__item {
     grid-template-columns: 1fr;
-   }
-   .courses__item img{
-    width: 100%;
-   }
+  }
 
-   .courses__item {
+  .courses__item img {
+    width: 100%;
+  }
+
+  .courses__item {
     border-color: var(--black);
   }
+
   .courses__item .courses-item__description {
     gap: 14px;
   }
+
   .courses__item .wrapper-arrow {
     background-color: var(--orange);
   }
-  
+
   .courses__item:hover .courses-item__retraining svg,
   .courses__item:hover .wrapper__hours svg {
     fill: var(--gray);
   }
-  
+
   .courses__item .wrapper-arrow svg {
     fill: var(--white);
   }
