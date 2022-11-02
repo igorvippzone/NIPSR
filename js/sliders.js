@@ -55,9 +55,9 @@ function navigation(slider) {
     const slideView = slider.options.slides.perView - 1;
     slider.track.details.slides.forEach((_e, idx, arr) => {
       // if (arr.length - slideView > idx) {
-        var dot = createDiv("dot");
-        dot.addEventListener("click", () => slider.moveToIdx(idx));
-        dots.appendChild(dot);
+      var dot = createDiv("dot");
+      dot.addEventListener("click", () => slider.moveToIdx(idx));
+      dots.appendChild(dot);
       // }
     });
     wrapper.appendChild(dots);
@@ -97,6 +97,23 @@ function navigation(slider) {
 
 const directionList = document.getElementById("direction__list");
 const teachersList = document.getElementById("teachers__list");
+const diplomaCertificateList = document.getElementById(
+  "diploma-certificate-slider"
+);
+
+if (document.documentElement.clientWidth < 576) {
+  console.log("lol");
+  if (diplomaCertificateList) {
+    diplomaCertificateSlider = new KeenSlider(
+      diplomaCertificateList,
+      {
+        loop: true,
+        slides: { perView: 1},
+      },
+      [navigation]
+    );
+  }
+}
 
 if (directionList) {
   const directionSlider = new KeenSlider(

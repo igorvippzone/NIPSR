@@ -588,7 +588,7 @@ a.link:active {
   }
 
   .custom-input .message {
-    transform: translateY(calc(100% + 2px));
+    transform: translateY(100%);
     display: none;
   }
 }
@@ -806,7 +806,7 @@ a.link:active {
 
 .header .nav {
   grid-area: nav;
-  align-self: center;
+  align-self: baseline;
 }
 
 .header .phone {
@@ -1898,7 +1898,7 @@ a.link:active {
   position: relative
 }
 
-.teachers--slider .description__education {
+.teachers--slider .teachers-item__description .description__education {
   background-color: var(--gray-dark);
   color: var(--white);
 }
@@ -1990,6 +1990,14 @@ a.link:active {
 
   .teachers--slider .teachers__item {
     border: 1px solid var(--black);
+  }
+
+  .teachers--slider h2 {
+    margin-bottom: 18px;
+  }
+  
+  .teachers--slider h3 {
+    margin-bottom: 30px;
   }
 }
 

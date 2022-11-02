@@ -223,6 +223,10 @@
     max-width: inherit;
   }
 
+  .parametrs-course__list h4 {
+    font-size: 16px;
+  }
+
   .parametrs-course__item p::after {
     width: 8px;
     height: 8px;
@@ -696,3 +700,449 @@
 }
 
 /* </programm-course__table> */
+
+/* <diploma-certificate> */
+.diploma-certificate .diploma-certificate-slider__list {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.diploma-certificate .diploma-certificate-slider__list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diploma-certificate-slider__list img {
+  max-height: 200px;
+}
+
+.diploma-certificate h2 {
+  margin-bottom: 20px;
+}
+
+.diploma-certificate>h3 {
+  margin-bottom: 60px;
+}
+
+.diploma-certificate__inner {
+  display: grid;
+  grid-template-areas: 'diplomaMain diplomaTitle'
+    'diplomaMain diplomaAnnex';
+  gap: 0 5vw;
+
+  margin-bottom: 100px;
+}
+
+.diploma-certificate__inner .wrapper__title {
+  grid-area: diplomaTitle;
+}
+
+.diploma-certificate__main {
+  grid-area: diplomaMain;
+  align-self: end;
+}
+
+.diploma-certificate__annex {
+  grid-area: diplomaAnnex;
+  align-self: end;
+}
+
+.diploma-certificate__inner .wrapper__title h3 {
+  margin-bottom: 10px;
+}
+
+.diploma-certificate__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.diploma-certificate__description {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.diploma-certificate__description::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.diploma-certificate__description::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.diploma-certificate__main img {
+  max-height: 27vw;
+  height: 100%;
+}
+
+.diploma-certificate__annex img {
+  max-height: 240px;
+  height: 100%;
+}
+
+.diploma-certificate__optional {}
+
+.diploma-certificate__optional h3 {
+  margin-bottom: 10px;
+}
+
+.diploma-certificate__optional h5 {
+  margin-bottom: 30px;
+}
+
+.diploma-certificate__tools {
+  background: url(../images/course/course-bg-3.png) no-repeat right center/contain,
+    url(../images/course/course-bg-4.svg) no-repeat right center/contain;
+}
+
+.optional-tools {
+  margin-bottom: 100px;
+}
+
+.optional-tools,
+.optional-record {
+  position: relative;
+  padding: 40px 100px;
+  border: 1px solid var(--gray);
+  max-width: 60%;
+  background-color: var(--white);
+}
+
+.optional-tools::after,
+.optional-record::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 100%;
+  top: 0;
+
+  background-color: var(--white);
+  border: 0;
+
+  transform-origin: center;
+
+}
+
+.optional-tools::before,
+.optional-record::before {
+  position: absolute;
+  content: '';
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  background-color: var(--white);
+  border-top: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+
+  transform-origin: center;
+}
+
+.optional-tools::after {
+  right: 0;
+
+}
+
+.optional-tools::before {
+  right: 0;
+  transform: translateX(50%) translateY(-50%) rotate(45deg);
+}
+
+.optional-record::after {
+  left: 0;
+}
+
+.optional-record::before {
+  left: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+}
+
+.optional__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.optional__item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 14px;
+}
+
+.optional__item::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  left: 0;
+  top: 50%;
+
+  background-color: var(--orange);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.diploma-certificate__record {
+  background: url(../images/course/course-bg-5.png) no-repeat 10% center/contain,
+    url(../images/course/course-bg-6.svg) no-repeat left center/contain;
+}
+
+.optional-record {
+  margin-left: auto;
+}
+
+@media (min-width: 1400px) {
+  .diploma-certificate__inner {
+    gap: 0 70px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .diploma-certificate__inner {
+    display: grid;
+    grid-template-areas: 'diplomaTitle'
+      'diplomaMain '
+      ' diplomaAnnex';
+    gap: 30px;
+  }
+
+  .diploma-certificate__list {
+    justify-content: start;
+  }
+}
+
+@media (max-width: 991px) {
+
+
+  .diploma-certificate__main img,
+  .diploma-certificate__annex img {
+    max-height: 37vw;
+  }
+}
+
+@media (max-width: 575px) {
+  .diploma-certificate-list__wrapper {
+    display: none;
+  }
+
+  .diploma-certificate .diploma-certificate-slider__list {
+    display: flex;
+  }
+
+  .diploma-certificate__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+/* </diploma-certificate> */
+
+/* <installment> */
+.section__installment {
+  background-color: var(--gray-dark);
+  padding: 230px 0;
+  background: url(../images/course/course-bg-7.svg) no-repeat 0 center/ 800px,
+    url(../images/course/course-bg-8.svg) no-repeat 100% center/ 800px,
+    var(--gray-dark);
+}
+
+.installment {
+  background-color: var(--white);
+  padding: 80px;
+}
+
+.installment h2 {
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.installment>h4 {
+  margin-bottom: 20px;
+}
+
+.installment__description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--black);
+}
+
+.installment__description .parametrs-course__list {
+  gap: 20px 0;
+  justify-content: space-between;
+  padding-right: 40px;
+}
+
+.installment__description .installment__payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  position: relative;
+}
+
+.installment__description .installment__payment::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: var(--gray-dark);
+}
+
+.installment__description .installment-payment__price {
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 120%;
+  padding: 7px 18px;
+
+  flex-shrink: 0;
+
+  background-color: var(--gray-light);
+  border-radius: 10px;
+}
+
+.installment__form {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 400px);
+  gap: 20px 33px;
+}
+
+.installment__form .input__wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.installment__form .input__wrapper .custom-input {
+  max-width: 330px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+
+.installment__form .btn {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 5px;
+  width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .section__installment {
+    background: url(../images/course/course-bg-7.svg) no-repeat -30% 100%/ 70vw,
+      url(../images/course/course-bg-8.svg) no-repeat 130% 0/ 70vw,
+      var(--gray-dark);
+  }
+  .installment__description .installment-payment__price {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 1199px) {
+  .section__installment {
+    padding: 15vw 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .installment__description {
+    grid-template-columns: 1fr;
+  }
+
+  .installment__description .parametrs-course__list {
+    padding-right: 0;
+  }
+
+  .installment__description .installment__payment {
+    display: none;
+  }
+
+  .installment__form {
+    grid-template-columns: 1fr;
+    gap: 20px 33px;
+  }
+
+  .installment__form .input__wrapper .custom-input {
+    max-width: 100%;
+  }
+
+  .installment__form .btn {
+    padding: 18px 10px;
+    order: 1;
+  }
+
+  .installment__form .input__wrapper {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section__installment {
+    padding: 60px 0;
+  }
+
+  .installment h2 {
+    margin-bottom: 12px;
+  }
+
+  .installment>h4 {
+    margin-bottom: 25px;
+  }
+
+  .installment {
+    background-color: var(--white);
+    padding: 30px 24px;
+  }
+
+  .installment__description {
+    padding-bottom: 28px;
+    margin-bottom: 15px;
+  }
+
+  .installment__description .parametrs-course__list {
+    gap: 12px;
+  }
+
+  .installment__form {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .installment__form .input__wrapper {
+    flex-direction: column;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .installment__form .btn {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .installment>h4 {
+    font-size: 16px;
+  }
+}
+
+/* </installment> */
