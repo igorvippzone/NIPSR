@@ -90,4 +90,19 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(filter);
       })
     : "";
+
+    const togglePartitionBtn = document.getElementById("togglePartition");
+    const partitionList = document.querySelector(".partition__list");
+
+    togglePartitionBtn
+      ? togglePartitionBtn.addEventListener("click", (e) => {
+        e.target.classList.toggle("active");
+        partitionList.classList.toggle("active");
+        console.log(partitionList);
+      })
+    : "";
+
+
+
+    const 
 });

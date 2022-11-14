@@ -1,0 +1,148 @@
+.information-organization {
+  display: grid;
+  grid-template-columns: 370px 1fr;
+  gap: 40px;
+}
+
+.toggle__partition-btn {
+  background: url(../images/partition-icon.svg) no-repeat 20px center/20px;
+  padding: 16px 16px 16px 55px;
+  border: 1px solid var(--gray);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  width: 100%;
+  text-align: start;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.toggle__partition-btn::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 4px;
+  display: block;
+  background: url(../images/arrow-2-icon.svg) no-repeat center/8px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  transition: transform .3s;
+}
+
+.toggle__partition-btn.active::after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.partition__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.partition__item {
+  background-color: var(--gray-light);
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+table {
+  border: 1px solid var(--black);
+  width: 100%;
+}
+
+table p {
+  margin-bottom: 30px;
+}
+
+table p:last-child {
+  margin-bottom: 0;
+}
+
+tbody {
+  border-bottom: 1px solid var(--black);
+  padding: 30px;
+  display: block;
+}
+
+table tbody:last-child {
+  border: none;
+}
+
+th {
+  text-align: left;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--gray);
+  width: 100%;
+  display: block;
+}
+
+tr {
+  width: 100%;
+  display: block;
+}
+
+td {
+  padding-top: 20px;
+}
+
+.information-organization__phone {
+  text-decoration: none;
+}
+
+.information-organization__phone:hover {
+  text-decoration: underline;
+}
+
+.information-organization__mail {
+  text-decoration: none;
+  color: var(--orange-dark);
+}
+
+.information-organization__mail:hover {
+  text-decoration: underline;
+
+}
+
+@media (max-width: 991px) {
+  .information-organization {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .toggle__partition-btn {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .partition__list {
+    display: none;
+  }
+
+  .partition__list.active {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  table h4{
+    font-size: 16px;
+  }
+  table p {
+    margin-bottom: 20px;
+  }
+
+  tbody {
+    padding: 10px;
+  }
+
+  th {
+    padding-bottom: 10px;
+  }
+
+  td {
+    padding-top: 10px;
+  }
+}

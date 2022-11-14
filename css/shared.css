@@ -1889,6 +1889,19 @@ a.link:active {
 .teachers--slider h3 {
   margin-bottom: 60px;
 }
+.teachers--slider .wrapper__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teachers--slider .wrapper__title h2 {
+  margin: 0;
+}
+
+.teachers--slider .wrapper__title {
+  margin-bottom: 60px;
+}
 
 .wrapper__teachers-slider {
   padding: 0 110px;
@@ -2185,6 +2198,7 @@ a.link:active {
   flex-shrink: 0;
   flex-grow: 0;
   border: 1px solid var(--gray);
+  background-color: var(--white);
 
   background-repeat: no-repeat;
   background-position: center center;

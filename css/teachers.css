@@ -148,16 +148,3 @@
 
 }
 
-.teachers--slider .wrapper__title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.teachers--slider .wrapper__title h2 {
-  margin: 0;
-}
-
-.teachers--slider .wrapper__title {
-  margin-bottom: 60px;
-}

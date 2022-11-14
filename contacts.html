@@ -181,6 +181,53 @@
         </div>
       </div>
     </section>
+    <section class="section__feedback">
+      <div class="container">
+        <div class="feedback">
+          <h2>Обращение в НИПСР</h2>
+          <form action="" class="feedback__form">
+            <div class="wrapper__choice">
+              <div class="custom-choice">
+                <input id="browser1" type="radio" name="type-feedback" value="Отзыв">
+                <label for="browser1">Отзыв</label>
+              </div>
+              <div class="custom-choice">
+                <input id="browser2" type="radio" name="type-feedback" value="Благодарность">
+                <label for="browser2">Благодарность</label>
+              </div>
+              <div class="custom-choice">
+                <input id="browser3" type="radio" name="type-feedback" value="Жалоба">
+                <label for="browser3">Жалоба</label>
+              </div>
+              <div class="custom-choice">
+                <input id="browser4" type="radio" name="type-feedback" value="Тех. поддержка">
+                <label for="browser4">Тех. поддержка</label>
+              </div>
+            </div>
+
+            <div class="wrapper__input">
+              <div class="custom-input">
+                <input id="name" name="name" type="text" placeholder="ФИО" />
+                <label for="name" class="label-inner">ФИО</label>
+              </div>
+              <div class="custom-input">
+                <input id="name" name="program" type="text" placeholder="Программа" />
+                <label for="name" class="label-inner">Программа</label>
+              </div>
+            </div>
+
+            <textarea class="feedback__textarea" name="text" placeholder="Текст отзыва..."></textarea>
+
+            <div class="wrapper__button">
+              <p class="explanation">Нажимая кнопку «Отправить отзыв» я даю согласие на обработку персональных данных
+              </p>
+              <button class="btn">Отправить отзыв</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
 
@@ -310,13 +357,13 @@
 
           <ul class="nav-menu__list custom-scroll">
             <li class="nav-menu__item">
-              <h3><a href="#">Акции</a></h3>
+              <h3><a href="discount.html">Акции</a></h3>
             </li>
             <li class="nav-menu__item">
               <h3><a href="#">Блог</a></h3>
             </li>
             <li class="nav-menu__item">
-              <h3><a href="#">Сведения об организации</a></h3>
+              <h3><a href="information-organization.html">Сведения об организации</a></h3>
             </li>
             <li class="nav-menu__item active">
               <h3><a href="#">Контакты</a></h3>

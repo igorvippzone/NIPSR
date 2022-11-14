@@ -1,0 +1,132 @@
+.discount__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.discount__item {
+  border: 1px solid var(--gray);
+  padding: 30px 37px;
+  padding-bottom: 0;
+  cursor: pointer;
+
+  transition: border-color .3s;
+}
+
+.discount__item:hover {
+  border-color: var(--black);
+}
+
+.discount__item:hover .wrapper-button {
+  background-color: var(--orange);
+}
+
+.discount__item:hover .wrapper-button .btn-arrow {
+  fill: var(--white);
+}
+
+.discount__item p {
+  margin-bottom: 30px;
+}
+
+
+.discount__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid transparent;
+
+  transition: border-color .3s;
+
+}
+
+
+
+.wrapper-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 43px;
+  height: 40px;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  transition: background-color .3s;
+}
+
+.wrapper-button .btn-arrow {
+  fill: var(--gray);
+
+  transition: fill .3s;
+}
+
+.wrapper-button.close .btn-close {
+  display: block;
+}
+
+.wrapper-button.close .btn-arrow,
+.wrapper-button .btn-close {
+  display: none;
+}
+
+.discount__item.active {
+  border-color: var(--black);
+  padding-bottom: 30px;
+  cursor: inherit;
+}
+
+.discount__item.active .discount__header {
+  border-color: var(--gray);
+  margin-bottom: 30px;
+}
+
+.discount__item.active .wrapper-button {
+  background-color: var(--gray)
+}
+
+.discount__item.active .wrapper-button:hover {
+  background-color: var(--orange);
+}
+
+@media (max-width: 767px) {
+  .discount__list {
+    gap: 20px;
+  }
+
+  .discount__item {
+    padding: 20px 16px;
+    padding-bottom: 0;
+  }
+
+  .discount__item p {
+    margin-bottom: 20px;
+  }
+
+  .discount__item .btn {
+    width: 100%;
+  }
+
+  .discount__item:hover {
+    border-color: var(--gray);
+  }
+
+  .discount__header {
+    padding-bottom: 20px;
+  }
+
+  .discount__item.active {
+    border-color: var(--gray);
+    padding-bottom: 20px;
+  }
+
+  .discount__item.active .discount__header {
+    margin-bottom: 20px;
+  }
+
+}

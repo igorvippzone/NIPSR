@@ -112,3 +112,132 @@
     height: 300px;
   }
 }
+
+/* <feedback> */
+
+.feedback {
+  padding: 60px 70px;
+  background: url(../images/bg-7.svg) no-repeat 50% center /480px,
+    linear-gradient(90deg, #C4C4C4 50%, rgba(196, 196, 196, 0) 72%),
+    url(../images/contacts/form-bg.jpg) no-repeat right top /contain;
+}
+
+.feedback h2 {
+  margin-bottom: 30px;
+}
+
+.feedback__form .custom-choice input+label::before {
+  border-color: var(--white);
+}
+
+.feedback__form .custom-choice input:checked+label::before {
+  border-color: var(--orange);
+}
+
+.wrapper__choice {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 40px;
+}
+
+.wrapper__input {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.wrapper__input .custom-input {
+  width: 100%;
+  margin: 0;
+}
+
+.feedback__form {
+  max-width: 680px;
+}
+
+.feedback__textarea {
+  resize: none;
+  padding: 16px 30px;
+  width: 100%;
+  height: 100%;
+  min-height: 130px;
+
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.feedback__textarea::placeholder {
+
+  color: var(--black);
+}
+
+.feedback__textarea:focus {
+  outline: none;
+}
+
+.wrapper__button {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+}
+
+.wrapper__button .explanation {
+  max-width: 300px;
+
+}
+
+@media (max-width: 991px) {
+  .feedback {
+    padding: 60px 7vw;
+    background: url(../images/bg-7.svg) no-repeat 70% center /300px,
+      linear-gradient(90deg, #C4C4C4 50%, rgba(196, 196, 196, 0) 90%),
+      url(../images/contacts/form-bg.jpg) no-repeat 20vw top /cover;
+  }
+}
+
+@media (max-width: 767px) {
+  .section__feedback {
+    background: url(../images/bg-7.svg) no-repeat 100% 60% /300px,
+      linear-gradient(180deg, #C4C4C4 30%, rgba(196, 196, 196, 0) 60%),
+      url(../images/contacts/form-bg.jpg) no-repeat center 22vw /cover;
+  }
+
+  .feedback {
+    padding: 60px 0;
+    padding-top: 40px;
+    background: none;
+  }
+
+  .wrapper__button {
+    flex-direction: column;
+  }
+
+  .feedback__textarea {
+    padding: 14px 20px;
+    min-height: 110px;
+    font-size: 12px;
+
+  }
+}
+
+@media (max-width: 575px) {
+
+
+  .wrapper__choice,
+  .wrapper__input {
+    flex-direction: column;
+
+    margin-bottom: 20px;
+  }
+}
+
+/* </feedback> */
