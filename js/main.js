@@ -91,18 +91,40 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     : "";
 
-    const togglePartitionBtn = document.getElementById("togglePartition");
-    const partitionList = document.querySelector(".partition__list");
+  const togglePartitionBtn = document.getElementById("togglePartition");
+  const partitionList = document.querySelector(".partition__list");
 
-    togglePartitionBtn
-      ? togglePartitionBtn.addEventListener("click", (e) => {
+  togglePartitionBtn
+    ? togglePartitionBtn.addEventListener("click", (e) => {
         e.target.classList.toggle("active");
         partitionList.classList.toggle("active");
         console.log(partitionList);
       })
     : "";
 
+  function toggleAccordion(e) {
 
+    if (!this.classList.contains("active")) {
+      this.classList.add("active");
+    } else {
+      e.composedPath().forEach((item) => {
+        if (item?.classList?.contains("wrapper-button")) {
+          this.classList.remove("active");
+        }
+        if (item?.classList?.contains("discount__item")) {
+          return;
+        }
+      });
+    }
+  }
 
-    const 
+  const discountAccordion = document.getElementById("discount-accordion");
+  if (discountAccordion) {
+    const discountItem =
+      discountAccordion.querySelectorAll("li.discount__item");
+
+    discountItem.forEach((item) => {
+      item.addEventListener("click", toggleAccordion);
+    });
+  }
 });

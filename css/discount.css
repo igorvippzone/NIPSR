@@ -66,12 +66,12 @@
   transition: fill .3s;
 }
 
-.wrapper-button.close .btn-close {
+.discount__item.active .wrapper-button .btn-close {
   display: block;
 }
 
-.wrapper-button.close .btn-arrow,
-.wrapper-button .btn-close {
+.discount__item.active .wrapper-button .btn-arrow,
+.discount__item .wrapper-button .btn-close {
   display: none;
 }
 
@@ -92,6 +92,14 @@
 
 .discount__item.active .wrapper-button:hover {
   background-color: var(--orange);
+}
+
+.discount__item .discount__description{
+  display: none;
+}
+
+.discount__item.active .discount__description{
+  display: block;
 }
 
 @media (max-width: 767px) {
