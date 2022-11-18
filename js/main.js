@@ -102,8 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     : "";
 
-  function toggleAccordion(e) {
+  // toggle accordeon
 
+  function toggleAccordion(e) {
     if (!this.classList.contains("active")) {
       this.classList.add("active");
     } else {
@@ -127,4 +128,33 @@ document.addEventListener("DOMContentLoaded", () => {
       item.addEventListener("click", toggleAccordion);
     });
   }
+
+  // tabs information-organization
+  const partitions = document.querySelectorAll("li.partition__item");
+  console.log(partitions);
+
+  const tabs = document.querySelector(".tabs");
+  const tabsPartition = document.querySelectorAll(".partition__item");
+  const tabsContent = document.querySelectorAll(".tabs__content");
+
+  if (tabs) {
+    tabs.addEventListener("click", (e) => {
+      if (e.target.classList.contains("partition__item")) {
+        const tabsPath = e.target.dataset.partitionPath;
+        tabsPartition.forEach((el) => el.classList.remove("active"));
+        document
+          .querySelector(`[data-partition-path='${tabsPath}']`)
+          .classList.add("active");
+        tabsHandler(tabsPath);
+        partitionList.classList.remove("active");
+      }
+    });
+  }
+
+  const tabsHandler = (path) => {
+    tabsContent.forEach((el) => {
+      el.classList.remove("active");
+    });
+    document.querySelector(`[id="${path}"]`).classList.add("active");
+  };
 });

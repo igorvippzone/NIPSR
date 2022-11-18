@@ -124,61 +124,62 @@
 
     <section class="section__information-organization">
       <div class="container">
-        <div class="information-organization">
+        <div class="information-organization tabs">
           <div class="information-organization__partition">
             <button id="togglePartition" class="toggle__partition-btn">Разделы</button>
             <ul class="partition__list">
-              <li class="partition__item" data- >
-                <h5>Основные сведения</h5>
+              <li class="partition__item active" data-partition-path="part1">
+                Основные сведения
+              </li>
+              <li class="partition__item" data-partition-path="part2">
+                Структура и органы управления образовательной организацией
+              </li>
+              <li class="partition__item" data-partition-path="part3">
+                Документы
+              </li>
+              <li class="partition__item" data-partition-path="part4">
+                Образование
+              </li>
+              <li class="partition__item" data-partition-path="part5">
+                Образовательные стандарты
               </li>
               <li class="partition__item">
-                <h5>Структура и органы управления образовательной организацией</h5>
+                Руководство. Педагогический (научно-педагогический) состав
               </li>
               <li class="partition__item">
-                <h5>Документы</h5>
+                Платные образовательные услуги
               </li>
               <li class="partition__item">
-                <h5>Образование</h5>
+                Материально-техническое обеспечение и оснащенность образовательного процесса
               </li>
               <li class="partition__item">
-                <h5>Образовательные стандарты</h5>
+                Финансово-хозяйственная деятельность
               </li>
               <li class="partition__item">
-                <h5>Руководство. Педагогический (научно-педагогический) состав</h5>
+                Вакантные места для приема (перевода)
               </li>
               <li class="partition__item">
-                <h5>Платные образовательные услуги</h5>
+                Стипендии и иные виды материальной поддержки
               </li>
               <li class="partition__item">
-                <h5>Материально-техническое обеспечение и оснащенность образовательного процесса</h5>
+                Политика в области обработки
+                и защиты персональных данных
               </li>
               <li class="partition__item">
-                <h5>Финансово-хозяйственная деятельность</h5>
+                Антикоррупционная политика
               </li>
               <li class="partition__item">
-                <h5>Вакантные места для приема (перевода)</h5>
+                Профилактика экстремизма
+                и терроризма
               </li>
               <li class="partition__item">
-                <h5>Стипендии и иные виды материальной поддержки</h5>
-              </li>
-              <li class="partition__item">
-                <h5>Политика в области обработки
-                  и защиты персональных данных</h5>
-              </li>
-              <li class="partition__item">
-                <h5>Антикоррупционная политика</h5>
-              </li>
-              <li class="partition__item">
-                <h5>Профилактика экстремизма
-                  и терроризма</h5>
-              </li>
-              <li class="partition__item">
-                <h5>Международное сотрудничество</h5>
+                Международное сотрудничество
               </li>
 
             </ul>
           </div>
-          <div class="information-organization__content" id="inf-1">
+
+          <div class="information-organization__content tabs__content active" id="part1">
             <table>
               <tbody>
                 <tr>
@@ -337,6 +338,10 @@
 
             </table>
           </div>
+          <div class="tabs__content" id="part2">2</div>
+          <div class="tabs__content" id="part3">3</div>
+          <div class="tabs__content" id="part4">4</div>
+          <div class="tabs__content" id="part5">5</div>
         </div>
       </div>
     </section>

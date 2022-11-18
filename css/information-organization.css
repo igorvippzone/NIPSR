@@ -46,6 +46,28 @@
   background-color: var(--gray-light);
   padding: 20px;
   margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+
+  transition: background-color .3s;
+}
+
+.partition__item:hover {
+  background-color: var(--gray);
+}
+
+.partition__item.active {
+  background-color: var(--gray);
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content.active {
+  display: block;
 }
 
 table {
@@ -127,9 +149,10 @@ td {
 }
 
 @media (max-width: 767px) {
-  table h4{
+  table h4 {
     font-size: 16px;
   }
+
   table p {
     margin-bottom: 20px;
   }

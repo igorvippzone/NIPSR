@@ -1,7 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const btnFilterShow = document.getElementById("toggleFilter");
+  const formFilter = document.querySelector("form.filter");
+  btnFilterShow.classList.add("active");
+  formFilter.classList.add("active");
+  // const windowInnerWidth = window.innerWidth;
+  
   const customRange = document.querySelectorAll(".custom-range");
   createRange(customRange);
   range(customRange);
+
+  // if(windowInnerWidth=<991){
+  //   const btnFilterShow = document.getElementById('toggleFilter')
+  // }
 
   function onMousePosition(element, event) {
     const clientRect = element.getBoundingClientRect();
@@ -104,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         range.addEventListener("mousemove", (event) => {
           const position = onMousePosition(track, event);
-        
+
           if (isMoveLeft) {
             valueLeft = position;
 
