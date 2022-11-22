@@ -51,6 +51,9 @@
   justify-content: center;
   align-items: center;
 
+  align-self: flex-start;
+  flex-shrink: 0;
+
   width: 43px;
   height: 40px;
   background-color: transparent;
@@ -87,7 +90,8 @@
 }
 
 .discount__item.active .wrapper-button {
-  background-color: var(--gray)
+  background-color: var(--gray);
+
 }
 
 .discount__item.active .wrapper-button:hover {

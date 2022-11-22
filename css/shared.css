@@ -303,13 +303,16 @@ a.link:active {
   right: 0;
   transform: translateY(-50%);
 }
+
 .breadcrumbs__item:first-child {
   padding-left: 0;
 }
+
 .breadcrumbs__item:last-child {
   padding-right: 0;
 }
-.breadcrumbs__item:last-child a{
+
+.breadcrumbs__item:last-child a {
   cursor: default;
 }
 
@@ -1441,6 +1444,7 @@ a.link:active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 20px;
 
 }
 
@@ -1535,6 +1539,7 @@ a.link:active {
 .popup__menu .login__button {
   width: 100%;
   display: none;
+  margin-top: auto;
 }
 
 .popup__menu .phone {
@@ -1597,10 +1602,7 @@ a.link:active {
 @media (max-width: 575px) {
   .nav-menu__list {
     position: relative;
-    max-height: 222px;
-    /* box-shadow: inset 0 -50px 10px 10px gold;
-
-    background: linear-gradient(0deg, #dadada -18.04%, rgba(255, 255, 255, 0) 20%); */
+    /* max-height: 222px; */
   }
 }
 
@@ -1833,6 +1835,7 @@ a.link:active {
 
 .main-title p {
   padding-top: 30px;
+  font-size: 16px;
 }
 
 @media (max-width: 991px) {
@@ -1843,6 +1846,12 @@ a.link:active {
 
   .main-title p {
     padding-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-title h2 {
+    font-size: 28px;
   }
 }
 
@@ -1889,6 +1898,7 @@ a.link:active {
 .teachers--slider h3 {
   margin-bottom: 60px;
 }
+
 .teachers--slider .wrapper__title {
   display: flex;
   justify-content: space-between;
@@ -2008,7 +2018,7 @@ a.link:active {
   .teachers--slider h2 {
     margin-bottom: 18px;
   }
-  
+
   .teachers--slider h3 {
     margin-bottom: 30px;
   }
@@ -2172,6 +2182,7 @@ a.link:active {
 
 .custom-choice a {
   color: var(--gray);
+  text-decoration: none;
 }
 
 .custom-choice input {
@@ -2298,9 +2309,11 @@ a.link:active {
 
   transform: translateX(-50%);
 }
+
 .output.oL {
   transform: translateX(-50%);
 }
+
 .output.oR {
   transform: translateX(50%);
 }
@@ -2363,7 +2376,7 @@ a.link:active {
   text-align: center;
 }
 
-.how-training__current { 
+.how-training__current {
   width: 80px;
   height: 80px;
   background: url(../images/about-us/how-training-bg.png) no-repeat center/ contain;
@@ -2378,9 +2391,9 @@ a.link:active {
   position: relative;
 }
 
-.how-training__current::before{
+.how-training__current::before {
   content: "0" counter(number);
-	counter-increment: number;
+  counter-increment: number;
   position: absolute;
 }
 
@@ -2452,15 +2465,15 @@ a.link:active {
 
 /* <help-choice> */
 .section__help-choice {
-  background: url(../images/bg-1.svg) no-repeat 70% center /480px,
-    linear-gradient(90.62deg, #798073 51.28%, rgba(132, 138, 127, 0.85648) 63.49%, rgba(147, 152, 143, 0.662094) 76.66%, rgba(199, 201, 197, 0) 97.89%),
-    url(../images/help-choice-bg.jpg) no-repeat 20vw top /cover;
+  background: url(../images/bg-1.svg) no-repeat 50% center /480px,
+    linear-gradient(90.62deg, #798073 39%, rgba(132, 138, 127, 0.85648) 55.49%, rgba(147, 152, 143, 0.662094) 60.66%, rgba(199, 201, 197, 0) 66.89%),
+    url(../images/help-choice-bg.jpg) no-repeat right top /contain;
 }
 
 .help-choice {
   max-width: 80%;
   color: var(--white);
-  padding: 240px 0;
+  padding: 230px 0;
 }
 
 .help-choice__subtitle {
@@ -2470,22 +2483,34 @@ a.link:active {
 
 @media (min-width: 2000px) {
   .section__help-choice {
-    background: url(../images/bg-1.svg) no-repeat center center /480px,
-      linear-gradient(90.62deg, #798073 51.28%, rgba(132, 138, 127, 0.85648) 63.49%, rgba(147, 152, 143, 0.662094) 76.66%, rgba(199, 201, 197, 0) 97.89%),
-      url(../images/help-choice-bg.jpg) no-repeat 30vw top/cover;
+    background: url(../images/bg-1.svg) no-repeat 50% center /480px,
+      linear-gradient(90.62deg, #798073 39%, rgba(132, 138, 127, 0.85648) 55.49%, rgba(147, 152, 143, 0.662094) 60.66%, rgba(199, 201, 197, 0) 66.89%),
+      url(../images/help-choice-bg.jpg) no-repeat right top /cover;
   }
 }
 
 @media (max-width: 1199px) {
+  .section__help-choice {
+    background: url(../images/bg-1.svg) no-repeat 50% center /480px,
+      linear-gradient(90.62deg, #798073 39%, rgba(132, 138, 127, 0.85648) 55.49%, rgba(147, 152, 143, 0.662094) 60.66%, rgba(199, 201, 197, 0) 66.89%),
+      url(../images/help-choice-bg.jpg) no-repeat 20vw top /cover;
+  }
+
   .help-choice {
     padding: 20vw 0;
   }
+
+  /* .section__help-choice {
+    background: url(../images/bg-1.svg) no-repeat 70% center /480px,
+      linear-gradient(90.62deg, #798073 51.28%, rgba(132, 138, 127, 0.85648) 63.49%, rgba(147, 152, 143, 0.662094) 76.66%, rgba(199, 201, 197, 0) 97.89%),
+      url(../images/help-choice-bg.jpg) no-repeat 10vw top /contain;
+  } */
 }
 
 @media (max-width: 767px) {
   .section__help-choice {
     background: url(../images/bg-1.svg) no-repeat 90% 80% /300px,
-      linear-gradient(90.62deg, #798073 51.28%, rgba(132, 138, 127, 0.85648) 63.49%, rgba(147, 152, 143, 0.662094) 76.66%, rgba(199, 201, 197, 0) 97.89%),
+      linear-gradient(90.62deg, #798073 39%, rgba(132, 138, 127, 0.85648) 55.49%, rgba(147, 152, 143, 0.662094) 60.66%, rgba(199, 201, 197, 0) 66.89%),
       url(../images/help-choice-bg.jpg) no-repeat 10vw top/cover;
   }
 }

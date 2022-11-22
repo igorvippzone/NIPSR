@@ -577,6 +577,21 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+@media (min-width: 1300px) {
+  .section__application::before {
+    background: linear-gradient(276.24deg, #C4C4C4 40vw, rgba(196, 196, 196, 0) 94.32%),
+      url(../images/applcation-bg.jpg) no-repeat 0 /contain;
+
+  }
+}
+@media (min-width: 2000px) {
+  .section__application::before {
+    background-size: cover;
+    background-position: top;
+  }
+}
+
+
 
 @media (max-width: 1199px) {
   .application {

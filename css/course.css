@@ -81,6 +81,8 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
 .training-format__item .training-format__bg {
@@ -95,9 +97,17 @@
 
 }
 
+.training-format__item:nth-child(1) {
+  background-image: url(../images/course/training-format-bg-1.svg);
+}
+
 .training-format__item:nth-child(1) .training-format__bg {
   background-color: var(--orange-dark);
   background-image: url(../images/course/training-format-icon-1.svg);
+}
+
+.training-format__item:nth-child(2) {
+  background-image: url(../images/course/training-format-bg-2.svg);
 }
 
 .training-format__item:nth-child(2) .training-format__bg {
@@ -105,9 +115,17 @@
   background-image: url(../images/course/training-format-icon-2.svg);
 }
 
+.training-format__item:nth-child(3) {
+  background-image: url(../images/course/training-format-bg-3.svg);
+}
+
 .training-format__item:nth-child(3) .training-format__bg {
   background-color: var(--green);
   background-image: url(../images/course/training-format-icon-3.svg);
+}
+
+.training-format__item:nth-child(4) {
+  background-image: url(../images/course/training-format-bg-4.svg);
 }
 
 .training-format__item:nth-child(4) .training-format__bg {
@@ -179,7 +197,10 @@
 
   .training-format__item {
     gap: 20px;
-    justify-content: space-evenly;
+  }
+
+  .training-format__item h5 {
+    margin: 0 auto;
   }
 
   .start-learning {
@@ -231,6 +252,11 @@
     width: 8px;
     height: 8px;
   }
+
+  .training-format__item {
+    background-size: 200px;
+  }
+
 
   .training-format__item .training-format__bg {
     width: 52px;
@@ -512,6 +538,7 @@
 
   .who-course__item {
     padding: 30px;
+    background-size: 300px;
   }
 
   .who-course__item .who-course__wrapper {
@@ -999,6 +1026,10 @@
   padding-left: 40px;
   position: relative;
 }
+.installment-payment__text .subtext{
+  color: var(--orange-dark);
+}
+
 
 .installment__description .installment__payment::after {
   position: absolute;
@@ -1054,6 +1085,7 @@
       url(../images/course/course-bg-8.svg) no-repeat 130% 0/ 70vw,
       var(--gray-dark);
   }
+
   .installment__description .installment-payment__price {
     font-size: 4vw;
   }

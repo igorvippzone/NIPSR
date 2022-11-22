@@ -91,6 +91,9 @@
 .filter__block .custom-choice {
   margin-bottom: 12px;
 }
+.filter__block .custom-choice:last-child {
+  margin-bottom: 0;
+}
 
 .courses__item {
   display: grid;
@@ -268,7 +271,7 @@
 
   .courses {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 30px;
   }
 
   .toggle__filter-btn {
@@ -324,6 +327,7 @@
 
   .courses__item .wrapper__hours {
     width: 100%;
+    margin-bottom: 15px;
   }
 
   .courses__item .wrapper__price {
