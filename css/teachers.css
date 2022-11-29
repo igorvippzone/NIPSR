@@ -10,6 +10,12 @@
   }
 }
 
+@media (max-width: 575px) {
+  .section__teachers .teachers__item img {
+    max-width: 100%;
+  }
+}
+
 /* ************************ */
 
 .section__teacher {
@@ -49,6 +55,10 @@
 
 .wrapper__teacher h4 {
   margin-bottom: 40px;
+}
+
+.wrapper__teacher .subtext {
+  max-width: 700px;
 }
 
 .teacher__description {
@@ -112,6 +122,12 @@
     margin-bottom: 40px;
   }
 
+  .wrapper__teacher img {
+    max-height: inherit;
+    min-height: inherit;
+    width: 100%;
+  }
+
   .wrapper__teacher h2 {
     margin-bottom: 30px;
   }
@@ -147,4 +163,3 @@
   }
 
 }
-

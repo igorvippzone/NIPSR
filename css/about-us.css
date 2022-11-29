@@ -5,9 +5,11 @@
 }
 
 .about-us__bg {
-  background: url('../images/about-us/about-us-bg-1.png') no-repeat center / contain;
+  background: url(../images/about-us/about-us-bg-1.png) no-repeat center/300px,
+    url(../images/bg-6.svg) no-repeat center /100%;
   display: block;
-  width: 100%;
+  width: 450px;
+  flex-shrink: 0;
 }
 
 .about-us__content {
@@ -32,6 +34,9 @@
   .about-us__bg {
     min-height: 212px;
     height: 100%;
+    width: 100%;
+    background: url(../images/about-us/about-us-bg-1.png) no-repeat center/212px,
+      url(../images/bg-6.svg) no-repeat center /contain;
   }
 }
 
@@ -42,6 +47,12 @@
 
   .about-us__content p {
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-us__bg {
+    min-height: 67vw;
   }
 }
 
@@ -57,7 +68,7 @@
   color: var(--white);
   padding: 240px 0;
 
-  background: url('../images/bg-4.svg') no-repeat center right/ 435px;
+  background: url('../images/bg-4.svg') no-repeat 75% center/ 435px;
 }
 
 .why-teach h2,
@@ -93,7 +104,13 @@
 @media (max-width: 575px) {
   .section__why-teach {
     background: linear-gradient(180deg, #6B7D7C 50%, rgba(107, 125, 124, 0.879824) 60%, rgba(107, 125, 124, 0.372921) 71.53%, rgba(107, 125, 124, 0.246875) 90.31%, rgba(107, 125, 124, 0) 99.73%),
-      url(../images/about-us/about-us-bg-2.jpg) no-repeat center 40vw /cover;
+      #6B7D7C url(../images/about-us/about-us-bg-2.jpg) no-repeat center 120% /contain;
+  }
+}
+
+@media (max-width: 400px) {
+  .section__why-teach {
+    background-size: 490px;
   }
 }
 
@@ -219,5 +236,3 @@
 }
 
 /* </advantages> */
-
-

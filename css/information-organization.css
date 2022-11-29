@@ -73,6 +73,7 @@
 table {
   border: 1px solid var(--black);
   width: 100%;
+  border-collapse: collapse;
 }
 
 table p {
@@ -131,7 +132,7 @@ td {
 @media (max-width: 991px) {
   .information-organization {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 0;
   }
 
   .toggle__partition-btn {

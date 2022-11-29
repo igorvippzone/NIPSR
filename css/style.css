@@ -177,13 +177,13 @@
 }
 
 
-.direction .dot {
+/* .direction .dot {
   background-color: var(--orange);
 }
 
 .dot--active~.dot {
   background-color: var(--gray);
-}
+} */
 
 @media (max-width: 1199px) {
   .direction .dots {

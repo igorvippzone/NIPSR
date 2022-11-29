@@ -91,8 +91,66 @@
 .filter__block .custom-choice {
   margin-bottom: 12px;
 }
+
 .filter__block .custom-choice:last-child {
   margin-bottom: 0;
+}
+
+.filter__block .filter-block__switch{
+  margin-bottom: 20px;
+}
+
+.filter__block .switch-btn {
+  background-color: var(--gray);
+  color: var(--white);
+  border-radius: 14.5px 14.5px 0px 14.5px;
+  border: none;
+  cursor: pointer;
+  padding: 4px 15px 2px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  margin-right: 12px;
+
+  transition: background-color .3s;
+}
+
+.filter__block .switch-btn.active {
+  background-color: var(--orange);
+  cursor: default;
+}
+
+.filter__block .switch-btn:hover,
+.filter__block .switch-btn:active {
+  background-color: var(--orange-dark);
+}
+.filter__block .switch-btn.active:hover,
+.filter__block .switch-btn.active:active {
+  background-color:  var(--orange);
+}
+
+.filter__block .subtext{
+margin-bottom: 10px;
+}
+
+.filter .wrapper__btn{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.custom-choice.star input+label::before {
+
+  width: 20px;
+  height: 20px;
+
+  background-size: 20px;
+  background-image: url(../images/custom-input/star-icon.svg);
+
+  transition: border-color .3s, background-image .3s, background-color .3s;
+}
+.custom-choice.star input[type="checkbox"]+label:hover::before {
+  background-image: url(../images/custom-input/star-icon.svg);
 }
 
 .courses__item {
@@ -366,5 +424,3 @@
     fill: var(--white);
   }
 }
-
-

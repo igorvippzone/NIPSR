@@ -2,10 +2,12 @@
   margin: 0;
   border: none;
 }
-.section__filter{
+
+.section__filter {
   margin-bottom: 60px;
 }
-.filter{
+
+.filter {
   display: flex;
   /* flex-wrap: wrap; */
   gap: 0 10px;
@@ -15,19 +17,25 @@
 
 }
 
-.filter .wrapper__input{
+.filter .wrapper__input {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
 
 }
-.filter .wrapper__btn{
+
+.filter .wrapper__btn {
   display: flex;
   margin-left: auto;
   align-self: center;
   flex-shrink: 0;
 }
-.filter .btn-clear{
+
+.filter .btn-filter{
+  white-space: nowrap;
+}
+
+.filter .btn-clear {
   display: none;
 }
 
@@ -40,6 +48,8 @@
 
   gap: 30px;
 }
+
+
 
 
 .wrapper__reviews-item {
@@ -59,7 +69,8 @@
   flex-shrink: 0;
   overflow: hidden;
 }
-.reviews-item__image img{
+
+.reviews-item__image img {
   width: 100%;
 }
 
@@ -73,12 +84,15 @@
 .reviews-item__image.avatar.avatar-1 {
   background-image: url(../images//reviews/avatar-1.svg), url(../images/reviews/bg-1.svg);
 }
+
 .reviews-item__image.avatar.avatar-2 {
   background-image: url(../images//reviews/avatar-2.svg), url(../images/reviews/bg-1.svg);
 }
+
 .reviews-item__image.avatar.avatar-3 {
   background-image: url(../images//reviews/avatar-3.svg), url(../images/reviews/bg-1.svg);
 }
+
 .reviews-item__image.avatar.avatar-4 {
   background-image: url(../images//reviews/avatar-4.svg), url(../images/reviews/bg-1.svg);
 }
@@ -88,11 +102,12 @@
   padding: 20px 30px;
   border: 1px solid var(--gray);
 }
-.review-item__description h5{
+
+.review-item__description h5 {
   margin-bottom: 10px;
 }
 
-.wrapper__title{
+.wrapper__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,32 +127,72 @@
 
 .review-item__course {
   grid-area: rCourse;
-  background-color: var(--orange);
-  padding: 30px;
+  /* background-color: var(--orange); */
   color: var(--white);
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
 }
-.review-item__course .btn-transparent{
+
+
+.reviews__item:nth-child(4n-3) .review-item__description h5 {
+  color: var(--orange-dark);
+}
+
+.reviews__item:nth-child(4n-3) .review-item__course,
+.reviews__item:nth-child(4n-3) .btn.mobile  {
+  background-color: var(--orange-dark);
+}
+
+.reviews__item:nth-child(4n-2) .review-item__description h5 {
+  color: var(--green-dark);
+}
+
+.reviews__item:nth-child(4n-2) .review-item__course,
+.reviews__item:nth-child(4n-2) .btn.mobile  {
+  background-color: var(--green-dark);
+}
+
+.reviews__item:nth-child(4n-1) .review-item__description h5 {
+  color: var(--green);
+}
+
+.reviews__item:nth-child(4n-1) .review-item__course,
+.reviews__item:nth-child(4n-1) .btn.mobile  {
+  background-color: var(--green);
+}
+
+.reviews__item:nth-child(4n) .review-item__description h5 {
+  color: var(--green);
+}
+
+.reviews__item:nth-child(4n) .review-item__course,
+.reviews__item:nth-child(4n) .btn.mobile  {
+  background-color: var(--gray-dark);
+}
+
+.review-item__course .btn-transparent {
   align-self: flex-start;
 }
 
-.reviews__item .btn.mobile{
+.reviews__item .btn.mobile {
   display: none;
 }
 
-.reviews-item__link{
+.reviews-item__link {
   text-decoration: none;
   display: block;
 
   transition: color .3s;
 }
+
 .reviews-item__link:hover,
-.reviews-item__link:active{
+.reviews-item__link:active {
   color: var(--orange-dark);
 }
+
 @media (max-width: 1199px) {
   .filter {
     gap: 40px;
@@ -155,37 +210,44 @@
 }
 
 @media (max-width: 767px) {
-  .section__filter{
+  .section__filter {
     margin-bottom: 30px;
   }
-  .filter{
+
+  .filter {
     flex-direction: column;
     gap: 30px;
     padding: 30px 0;
   }
-  .filter .wrapper__btn{
+
+  .filter .wrapper__btn {
 
     margin-left: 0;
     align-self: flex-start;
     flex-shrink: 0;
     gap: 16px;
   }
-  .filter .btn-clear{
+
+  .filter .btn-clear {
     display: block;
   }
-  .filter .wrapper__input{
+
+  .filter .wrapper__input {
 
     gap: 12px;
-  
+
   }
+
   .reviews__item {
     display: flex;
     flex-direction: column;
   }
-  .reviews__item .review-item__course{
+
+  .reviews__item .review-item__course {
     display: none;
   }
-  .reviews__item .btn.mobile{
+
+  .reviews__item .btn.mobile {
     display: block;
   }
 
@@ -214,7 +276,8 @@
     margin-bottom: 20px;
     font-size: 15px;
   }
-  .wrapper__title h4{
+
+  .wrapper__title h4 {
     font-size: 22px;
     line-height: 30px;
     margin-bottom: 5px;
@@ -238,4 +301,11 @@
   }
 }
 
-@media (max-width: 575px) {}
+@media (max-width: 575px) {
+  
+  .filter .wrapper__input {
+flex-direction: column;
+
+
+  }
+}

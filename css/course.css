@@ -1,7 +1,8 @@
 /* <section-top-course> */
 
 .main-title {
-  background: url(../images/bg-6.png) no-repeat center right/380px;
+  background: url(../images/course/bg-2.png) no-repeat center right/380px,
+    url(../images/bg-6.svg) no-repeat center right/380px;
   padding-bottom: 40px;
   margin: 0;
   border: none;
@@ -291,8 +292,9 @@
 
 @media (max-width: 575px) {
   .main-title {
-    background: url(../images/bg-6.png) no-repeat bottom center/70vw;
-    padding-bottom: 60vw;
+    background: url(../images/course/bg-2.png) no-repeat bottom center/100%,
+      url(../images/bg-6.svg) no-repeat bottom center/100%;
+    padding-bottom: 75vw;
     margin: 0;
     border: none;
     margin-bottom: 40px;
@@ -1026,7 +1028,8 @@
   padding-left: 40px;
   position: relative;
 }
-.installment-payment__text .subtext{
+
+.installment-payment__text .subtext {
   color: var(--orange-dark);
 }
 

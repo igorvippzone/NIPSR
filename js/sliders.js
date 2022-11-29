@@ -102,7 +102,6 @@ const diplomaCertificateList = document.getElementById(
 );
 
 if (document.documentElement.clientWidth < 576) {
-  console.log("lol");
   if (diplomaCertificateList) {
     diplomaCertificateSlider = new KeenSlider(
       diplomaCertificateList,

@@ -134,7 +134,7 @@
             <form class="filter animate__faster animate__animated animate__fadeIn">
               <div class="filter__block">
                 <h5>Скоро стартуют</h5>
-                <div class="custom-choice">
+                <div class="custom-choice star">
                   <input id="browser1" type="checkbox">
                   <label for="browser1">Новые курсы</label>
                   <a href="#">(17)</a>
@@ -181,20 +181,25 @@
 
               <div class="filter__block">
                 <h5>Длительность</h5>
+                <div class="filter-block__switch">
+                  <button class="switch-btn active" type="button">Месяца</button>
+                  <button class="switch-btn"  type="button">Часы</button>
+                </div>
+                <p class="subtext">От 1 до 8 месяцев</p>
                 <div class="custom-range" id="duration" data-min-range="0" data-max-range="12" data-step='2'></div>
               </div>
-              <!--   <div class="track">
-                <div class="value-between"></div>
-                <div class="output o0">
-                  <div class="thumb t0"></div>
-                  <div class="view v0">1 мес</div>
-                </div>
-               
-                    <div class="output o1">
-                      <div class="output o1"> </div>
-                      <div class="thumb t1"></div>
-                    </div> 
-                  </div> -->
+
+              <div class="filter__block">
+                <h5>Цена</h5>
+                
+                <p class="subtext">От 3 000 ₽ до 10 000 ₽</p>
+                <div class="custom-range" id="duration" data-min-range="0" data-max-range="12" data-step='2'></div>
+              </div>
+
+              <div class="wrapper__btn">
+                <button class="btn btn-filter">Применить фильтр</button>
+                <button class="btn btn-clear">Сбросить</button>
+              </div>
             </form>
 
           </div>
