@@ -1114,12 +1114,21 @@ a.link:active {
 .footer__wrapper {
   font-size: 18px;
   display: grid;
-  grid-template-columns: 88px 1% 260px 1% 1fr 2% auto 3% auto;
+  /* grid-template-columns: 88px 1% 260px 1% 1fr 2% auto 3% auto; */
   /* grid-template-rows: 44px 44px; */
   align-items: flex-start;
 
-  grid-template-areas:
+
+  /* grid-template-areas:
     'flogo . flogoTitle . fnav . fphone . flogin'
+    'flogo . flogoSubtitle . confed . fphone . social'; */
+
+
+    grid-template-columns: 88px 20px 260px 46px auto 2% 153px 3% 190px;
+      grid-template-rows: 54px 12px 54px;
+    grid-template-areas:
+    'flogo . flogoTitle . fnav . fphone . flogin'
+    'flogo . . . fnav . fphone . .'
     'flogo . flogoSubtitle . confed . fphone . social';
 }
 
