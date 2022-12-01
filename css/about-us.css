@@ -52,7 +52,7 @@
 
 @media (max-width: 575px) {
   .about-us__bg {
-    min-height: 67vw;
+    min-height: 74vw;
   }
 }
 
@@ -61,7 +61,7 @@
 /* <why-teach> */
 .section__why-teach {
   background: linear-gradient(89.46deg, #6B7D7C 19.58%, rgba(107, 125, 124, 0.893103) 46.26%, rgba(107, 125, 124, 0.515625) 58.27%, rgba(107, 125, 124, 0) 70.81%),
-    url(../images/about-us/about-us-bg-2.jpg) no-repeat center top /cover;
+    url(../images/about-us/about-us-bg-2.jpg) no-repeat right top /contain;
 }
 
 .why-teach {
