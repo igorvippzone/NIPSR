@@ -1314,8 +1314,11 @@ a.link:active {
     grid-template-areas:
       'flogo . flogoTitle fnav fnav  '
       'flogo . flogoSubtitle confed confed '
+
       '. . fphone fphone fphone '
       '. . social  flogin  . ';
+
+      grid-template-rows: auto;
   }
 
   .footer .logo__title,
