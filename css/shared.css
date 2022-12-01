@@ -2405,7 +2405,7 @@ a.link:active {
 .how-training__current {
   width: 80px;
   height: 80px;
-  background: url(../images/about-us/how-training-bg.png) no-repeat center/ contain;
+  background: url(../images/about-us/how-training-bg.svg) no-repeat center/ contain;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2423,12 +2423,7 @@ a.link:active {
   position: absolute;
 }
 
-/* Удалить после решения какую картинку оставлять */
-.how-training__item:first-child .how-training__current {
-  background: url(../images/about-us/how-training-bg.svg) no-repeat center/ contain;
-}
 
-/*  */
 
 .how-training__item:nth-child(3n-2) {
   background-color: var(--orange-dark);

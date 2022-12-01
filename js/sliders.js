@@ -97,6 +97,7 @@ function navigation(slider) {
 
 const directionList = document.getElementById("direction__list");
 const teachersList = document.getElementById("teachers__list");
+const reviewsList = document.getElementById("reviews__list");
 const diplomaCertificateList = document.getElementById(
   "diploma-certificate-slider"
 );
@@ -107,7 +108,7 @@ if (document.documentElement.clientWidth < 576) {
       diplomaCertificateList,
       {
         loop: true,
-        slides: { perView: 1},
+        slides: { perView: 1 },
       },
       [navigation]
     );
@@ -156,4 +157,16 @@ if (teachersList) {
     },
     [navigation]
   );
+}
+
+if (reviewsList) {
+  const reviewsSlider = new KeenSlider(reviewsList, {
+    loop: true,
+    slides: { perView: 3, spacing: 40 },
+    breakpoints: {
+      "(max-width: 1199px)": {
+        slides: { perView: 1, spacing: 30 },
+      },
+    },
+  });
 }
