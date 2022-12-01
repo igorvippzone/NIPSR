@@ -443,7 +443,7 @@
   }
 
   .btn-filter,
-  .btn-clear{
-    padding: 8px 0;
+  .btn-clear {
+    width: auto;
   }
 }
