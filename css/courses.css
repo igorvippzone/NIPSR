@@ -1,5 +1,9 @@
 .main-title {
-  background: url(../images/bg-5.png) no-repeat center right/380px;
+  background:
+    url(../images/bg-52.png) no-repeat 83% 13% / 65px,
+    url(../images/bg-51.png) no-repeat 95% 56%/160px,
+    url(../images/bg-5.svg) no-repeat center right/380px;
+
   padding-bottom: 100px;
 }
 
@@ -96,7 +100,7 @@
   margin-bottom: 0;
 }
 
-.filter__block .filter-block__switch{
+.filter__block .filter-block__switch {
   margin-bottom: 20px;
 }
 
@@ -124,16 +128,17 @@
 .filter__block .switch-btn:active {
   background-color: var(--orange-dark);
 }
+
 .filter__block .switch-btn.active:hover,
 .filter__block .switch-btn.active:active {
-  background-color:  var(--orange);
+  background-color: var(--orange);
 }
 
-.filter__block .subtext{
-margin-bottom: 10px;
+.filter__block .subtext {
+  margin-bottom: 10px;
 }
 
-.filter .wrapper__btn{
+.filter .wrapper__btn {
   display: flex;
   justify-content: space-between;
 }
@@ -150,6 +155,7 @@ margin-bottom: 10px;
 
   transition: border-color .3s, background-image .3s, background-color .3s;
 }
+
 .custom-choice.star input[type="checkbox"]+label:hover::before {
   background-image: url(../images/custom-input/star-icon.svg);
   background-color: var(--white);
@@ -160,6 +166,7 @@ margin-bottom: 10px;
   background-color: var(--white);
   background-image: url(../images/custom-input/star-icon.svg);
 }
+
 .courses__item {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -316,7 +323,8 @@ margin-bottom: 10px;
 
 @media (max-width: 1199px) {
   .main-title {
-    background-size: 30%;
+    background-size: 6%, 13%, 30%;
+    background-position: 84% 23%, 95% 66%, center right;
   }
 
   .courses {
@@ -359,6 +367,9 @@ margin-bottom: 10px;
     margin-right: 2vw;
   }
 
+  .filter .wrapper__btn {
+    gap: 14px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -399,6 +410,8 @@ margin-bottom: 10px;
     margin: 0;
   }
 
+
+
 }
 
 @media (max-width: 575px) {
@@ -410,9 +423,7 @@ margin-bottom: 10px;
     width: 100%;
   }
 
-  .courses__item {
-    border-color: var(--black);
-  }
+
 
   .courses__item .courses-item__description {
     gap: 14px;
@@ -429,5 +440,10 @@ margin-bottom: 10px;
 
   .courses__item .wrapper-arrow svg {
     fill: var(--white);
+  }
+
+  .btn-filter,
+  .btn-clear{
+    padding: 8px 0;
   }
 }

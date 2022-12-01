@@ -98,11 +98,11 @@
   background-color: var(--orange);
 }
 
-.discount__item .discount__description{
+.discount__item .discount__description {
   display: none;
 }
 
-.discount__item.active .discount__description{
+.discount__item.active .discount__description {
   display: block;
 }
 
@@ -139,6 +139,20 @@
 
   .discount__item.active .discount__header {
     margin-bottom: 20px;
+  }
+
+  .discount__item.active .wrapper-button,
+  .discount__item.active:hover .wrapper-button {
+    background-color: var(--gray);
+  }
+
+
+  .discount__item .wrapper-button {
+    background-color: var(--orange);
+  }
+
+  .discount__item .wrapper-button .btn-arrow {
+    fill: var(--white);
   }
 
 }
