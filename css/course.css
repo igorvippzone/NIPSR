@@ -827,7 +827,27 @@
   height: 100%;
 }
 
-.diploma-certificate__optional {}
+.diploma-certificate__optional {
+  display: flex;
+  margin-bottom: 140px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.diploma-certificate__optional:last-child {
+  margin-bottom: 0px;
+
+}
+
+.optional__bg {
+  width: 40%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 320px;
+}
+
 
 .diploma-certificate__optional h3 {
   margin-bottom: 10px;
@@ -837,17 +857,19 @@
   margin-bottom: 30px;
 }
 
-.diploma-certificate__tools {
-  background: url(../images/course/course-bg-3.png) no-repeat right center/contain,
-    url(../images/course/course-bg-4.svg) no-repeat right center/contain;
+.diploma-certificate__tools .optional__bg {
+  background-image: url(../images/course/course-bg-3.png), url(../images/course/course-bg-4.svg);
+  background-position: right center;
 }
 
-.optional-tools {
-  margin-bottom: 100px;
+.diploma-certificate__record .optional__bg {
+  background-image: url(../images/course/course-bg-5.png),
+    url(../images/course/course-bg-6.svg);
+  background-position: left center;
 }
 
-.optional-tools,
-.optional-record {
+
+.optional-content {
   position: relative;
   padding: 40px 100px;
   border: 1px solid var(--gray);
@@ -855,8 +877,7 @@
   background-color: var(--white);
 }
 
-.optional-tools::after,
-.optional-record::after {
+.optional-content::after {
   position: absolute;
   content: '';
   width: 2px;
@@ -870,8 +891,7 @@
 
 }
 
-.optional-tools::before,
-.optional-record::before {
+.optional-content::before {
   position: absolute;
   content: '';
   width: 32px;
@@ -884,21 +904,20 @@
   transform-origin: center;
 }
 
-.optional-tools::after {
+.diploma-certificate__tools .optional-content::after {
   right: 0;
-
 }
 
-.optional-tools::before {
+.diploma-certificate__tools .optional-content::before {
   right: 0;
   transform: translateX(50%) translateY(-50%) rotate(45deg);
 }
 
-.optional-record::after {
+.diploma-certificate__record .optional-content::after {
   left: 0;
 }
 
-.optional-record::before {
+.diploma-certificate__record .optional-content::before {
   left: 0;
   transform: translateX(-50%) translateY(-50%) rotate(-135deg);
 }
@@ -928,14 +947,6 @@
   transform: translateY(-50%);
 }
 
-.diploma-certificate__record {
-  background: url(../images/course/course-bg-5.png) no-repeat 10% center/contain,
-    url(../images/course/course-bg-6.svg) no-repeat left center/contain;
-}
-
-.optional-record {
-  margin-left: auto;
-}
 
 @media (min-width: 1400px) {
   .diploma-certificate__inner {
@@ -955,6 +966,11 @@
   .diploma-certificate__list {
     justify-content: start;
   }
+
+  .diploma-certificate__optional {
+    margin-bottom: 10vw;
+
+  }
 }
 
 @media (max-width: 991px) {
@@ -964,9 +980,73 @@
   .diploma-certificate__annex img {
     max-height: 37vw;
   }
+
+  .diploma-certificate__optional {
+    flex-direction: column;
+  }
+
+  .diploma-certificate__optional .optional-content {
+    max-width: 100%;
+    width: 100%;
+    padding: 30px 25px;
+    order: 1;
+  }
+
+  .optional-content::after {
+    width: 100%;
+    height: 2px;
+  }
+
+  .optional-content::before {
+    top: 0;
+    right: 50%;
+    width: 25px;
+    height: 25px;
+    border-right: none;
+    border-left: 1px solid var(--gray);
+  }
+
+  .diploma-certificate__tools .optional-content::before {
+    right: 50%;
+  }
+
+  .diploma-certificate__record .optional-content::after {
+    left: 0;
+  }
+
+  .diploma-certificate__record .optional-content::before {
+    left: inherit;
+    transform: translateX(50%) translateY(-50%) rotate(45deg);
+  }
+
+  .diploma-certificate__optional .optional__bg {
+    width: 100%;
+    background-position: center;
+  }
+
 }
 
+
 @media (max-width: 575px) {
+  .diploma-certificate__optional h3 {
+    font-size: 16px;
+  }
+
+  .diploma-certificate__optional h5 {
+    font-size: 12px;
+  }
+
+  .optional__item {
+    font-size: 12px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  .optional__item::before {
+    width: 6px;
+    height: 6px;
+  }
+
   .diploma-certificate-list__wrapper {
     display: none;
   }
@@ -979,6 +1059,7 @@
     display: flex;
     flex-direction: column;
   }
+
 
 }
 
