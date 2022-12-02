@@ -170,3 +170,34 @@ if (reviewsList) {
     },
   });
 }
+
+$("#reviews__list").slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: "0",
+  variableWidth: true,
+  arrows:true,
+  prevArrow: '<div class=" slick-arrow arrow-prev"></div>',
+  nextArrow: '<div class="slick-arrow arrow-next"></div>',
+  responsive: [
+    {
+      breakpoint: 1351,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: false,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: false,
+        arrows:false,
+        dots: true
+      },
+    },
+  ],
+});
+
+console.log($("#reviews__list"));
