@@ -873,7 +873,7 @@
   position: relative;
   padding: 40px 100px;
   border: 1px solid var(--gray);
-  max-width: 60%;
+  width: 60%;
   background-color: var(--white);
 }
 
@@ -986,7 +986,6 @@
   }
 
   .diploma-certificate__optional .optional-content {
-    max-width: 100%;
     width: 100%;
     padding: 30px 25px;
     order: 1;
