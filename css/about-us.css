@@ -88,7 +88,11 @@
   .why-teach {
     padding: 20vw 0;
   }
+  .section__why-teach {
+    background-size: cover;
+  }
 }
+
 
 @media (max-width: 767px) {
   .section__why-teach {

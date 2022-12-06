@@ -171,13 +171,21 @@ if (reviewsList) {
   });
 }
 
-$("#reviews__list").slick({
+const reviewsSlider = $("#reviews__list");
+
+reviewsSlider.on('beforeChange', function(event, slick, currentSlide) {
+  console.log('Current slide: ' + currentSlide );
+
+  reviewsSlider.slick('slickSetOption', 'autoplaySpeed', 2222, true);
+});
+
+reviewsSlider.slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   centerMode: true,
   centerPadding: "0",
   variableWidth: true,
-  arrows:true,
+  arrows: true,
   prevArrow: '<div class=" slick-arrow arrow-prev"></div>',
   nextArrow: '<div class="slick-arrow arrow-next"></div>',
   responsive: [
@@ -193,11 +201,9 @@ $("#reviews__list").slick({
       settings: {
         slidesToShow: 1,
         variableWidth: false,
-        arrows:false,
-        dots: true
+        arrows: false,
+        dots: true,
       },
     },
   ],
 });
-
-console.log($("#reviews__list"));
