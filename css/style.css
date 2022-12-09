@@ -7,7 +7,12 @@
 .main-bg {
   width: 100%;
   display: block;
-  background: url('../images/main-bg.png') no-repeat center right/ contain;
+  background: url(../images/main-bg-1.png) no-repeat 70% 90%/40%,
+    url(../images/main-bg-2.png) no-repeat 100% 17%/15%,
+    url(../images/main-bg-3.png) no-repeat 16% 50%/12%,
+    url(../images/main-bg-4.png) no-repeat 0 100%/20%,
+    url(../images/main-bg.svg) no-repeat center/ contain;
+  ;
 }
 
 .main-content {
@@ -38,6 +43,19 @@
   max-width: 560px;
 }
 
+@media (max-width: 1199px) {
+  .main-bg {
+    width: 100%;
+    display: block;
+    background: url(../images/main-bg-1.png) no-repeat 70% 70%/40%,
+      url(../images/main-bg-2.png) no-repeat 100% 30%/15%,
+      url(../images/main-bg-3.png) no-repeat 30% 40%/12%,
+      url(../images/main-bg-4.png) no-repeat 0 75%/18%,
+      url(../images/main-bg.svg) no-repeat center/ contain;
+    ;
+  }
+}
+
 @media (max-width: 991px) {
   .main-bg {
     display: none;
@@ -59,8 +77,16 @@
 @media (max-width: 575px) {
   .mobile.main-bg {
     display: block;
-    background: url('../images/main-bg.png') no-repeat center/ contain;
+
+    width: 260px;
+    display: block;
+    background: url(../images/main-bg-1.png) no-repeat 100% 100%/136px,
+      url(../images/main-bg-3.png) no-repeat 30% 40%/43px,
+      url(../images/main-bg-4.png) no-repeat 0 85%/52px,
+      url(../images/main-bg-mobile.svg) no-repeat center/ contain;
+    ;
     height: 180px;
+    margin: 0 auto;
     margin-bottom: 30px;
   }
 
@@ -383,7 +409,9 @@
 }
 
 .psychology-bg {
-  background: url(../images/bg-2.png) no-repeat center/contain;
+
+  background: url(../images/main-bg-4.png) no-repeat 50% 60%/20%,
+    url(../images/bg-2.svg) no-repeat center/contain;
 }
 
 .psychology__content {
@@ -419,7 +447,11 @@
     padding: 0;
   }
 
-
+  .psychology-bg {
+    min-height: 300px;
+    background: url(../images/main-bg-4.png) no-repeat 50% 60%/52px,
+    url(../images/bg-2.svg) no-repeat center/contain;
+  }
 
 }
 
@@ -577,6 +609,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+
 @media (min-width: 1300px) {
   .section__application::before {
     background: linear-gradient(276.24deg, #C4C4C4 40vw, rgba(196, 196, 196, 0) 94.32%),
@@ -584,6 +617,7 @@
 
   }
 }
+
 @media (min-width: 2000px) {
   .section__application::before {
     background-size: cover;

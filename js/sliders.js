@@ -173,11 +173,11 @@ if (reviewsList) {
 
 const reviewsSlider = $("#reviews__list");
 
-reviewsSlider.on('beforeChange', function(event, slick, currentSlide) {
-  console.log('Current slide: ' + currentSlide );
+// reviewsSlider.on('beforeChange', function(event, slick, currentSlide) {
+//   console.log('Current slide: ' + currentSlide );
 
-  reviewsSlider.slick('slickSetOption', 'autoplaySpeed', 2222, true);
-});
+//   reviewsSlider.slick('slickSetOption', 'autoplaySpeed', 2222, true);
+// });
 
 reviewsSlider.slick({
   slidesToShow: 2,
