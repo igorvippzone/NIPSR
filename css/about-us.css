@@ -1,23 +1,58 @@
 /* <about-us> */
+
+.about-us__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 70px;
+}
+
+.about-usNav__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.about-usNav__item a {
+  display: block;
+  padding: 20px;
+  background-color: var(--gray-light);
+  text-decoration: none;
+
+  transition: color .3s, background-color .3s;
+}
+.about-usNav__item a:hover {
+
+  background-color: var(--gray-dark);
+  color: var(--white);
+}
+
 .about-us {
   display: flex;
   gap: 50px;
 }
 
+.about-us__content-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
 .about-us__bg {
-  background: url(../images/about-us/about-us-bg-1.png) no-repeat center/300px,
-    url(../images/bg-6.svg) no-repeat center /100%;
+  background: url(../images/about-us/about-us-bg-1.png) no-repeat center/ contain,
+    url(../images/bg-6.svg) no-repeat center /contain;
   display: block;
-  width: 450px;
+  width: 300px;
+  height: 242px;
   flex-shrink: 0;
 }
 
-.about-us__content {
-  max-width: 770px;
-}
 
 .about-us__content h2 {
-  margin-bottom: 30px;
+  margin-bottom: 0;
+  align-self: flex-end;
 }
 
 .about-us__content p {
@@ -25,34 +60,47 @@
 }
 
 @media (max-width: 991px) {
-  .about-us {
-    flex-direction: column;
-    /* gap: 30px; */
+  .about-us__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .about-usNav__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
   }
 
-  .about-us__bg {
-    min-height: 212px;
-    height: 100%;
-    width: 100%;
-    background: url(../images/about-us/about-us-bg-1.png) no-repeat center/212px,
-      url(../images/bg-6.svg) no-repeat center /contain;
-  }
 }
 
 @media (max-width: 767px) {
-  .about-us {
-    gap: 30px;
+  .about-usNav__list {
+
+    grid-template-columns: repeat(2, 1fr);
+
   }
 
   .about-us__content p {
     margin-bottom: 30px;
   }
+
+  .about-us__bg {
+    width: 100%;
+    height: 213px;
+  }
+
+  .about-us__content-wrapper {
+    flex-direction: column;
+
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 575px) {
-  .about-us__bg {
-    min-height: 74vw;
+  .about-usNav__list {
+    grid-template-columns: 1fr;
+
   }
 }
 
@@ -88,6 +136,7 @@
   .why-teach {
     padding: 20vw 0;
   }
+
   .section__why-teach {
     background-size: cover;
   }
