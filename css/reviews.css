@@ -20,7 +20,7 @@
 .filter .wrapper__input {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 15px;
 
 }
 

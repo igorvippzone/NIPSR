@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.2/keen-slider.min.css" />
 
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
   <link rel="stylesheet" href="css/shared.css">
   <link rel="stylesheet" href="css/course.css">
@@ -275,7 +275,7 @@
       </div>
     </section>
 
-    <section class="section__help-choice">
+    <!-- <section class="section__help-choice">
       <div class="container">
         <div class="help-choice">
           <h2 class="help-choice__title">Помочь с выбором?</h2>
@@ -285,7 +285,7 @@
           <button href="#" class="btn" data-open-popup="callback">Заказать звонок</и>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="section__who-course">
       <div class="container">
@@ -713,8 +713,8 @@
         <div class="review-slider">
           <h2>Наши ученики оценивают качество обучения</h2>
           <ul class="reviews__list" id="reviews__list">
-            
-            
+
+
 
             <li class="reviews__item">
               <div class="review-item__header">
@@ -794,7 +794,7 @@
 
               </div>
             </li>
-            
+
           </ul>
         </div>
       </div>
@@ -946,14 +946,17 @@
       </div>
     </section>
 
-    <section class="section__teachers--slider  last">
+    <section class="section__teachers--slider course__teachers--slider">
       <div class="container">
         <div class="teachers--slider ">
-          <h2>Занятия ведут опытние психологи</h2>
-          <h3>Познакомьтесь с преподавателями курса</h3>
+          <div>
+            <h2>Занятия ведут опытние психологи</h2>
+            <h3>Познакомьтесь с преподавателями курса</h3>
+          </div>
+
 
           <div class="wrapper__teachers-slider">
-            <ul class="teachers__list--slider teachers__list  keen-slider" id="teachers__list">
+            <ul class="teachers__list--slider teachers__list  keen-slider" id="teachers-course__list">
               <li class="teachers__item keen-slider__slide numer-slide1">
                 <img src="images/teachers/teacher-1.jpg" alt="Преподаватель">
                 <div class="teachers-item__description">
@@ -1043,6 +1046,52 @@
       </div>
     </section>
 
+    <section class="section__requirements last">
+      <div class="container">
+        <div class="requirements">
+          <h2>Требования к слушателям</h2>
+          <h3>Для поступления на обучение гражданам Российской Федерации вместе с заявлением необходимо предоставить:
+          </h3>
+
+          <ul class="requirements__list">
+            <li class="requirements__item">
+
+              <h5 class="requirement-title">Диплом</h5>
+              <p class="requirement-subtitle subtext">Диплом о высшем образовании (диплом бакалавра, специалиста,
+                магистра) или диплом о
+                среднем профессиональном образовании</p>
+            </li>
+            <li class="requirements__item">
+
+              <h5 class="requirement-title">Паспорт</h5>
+              <p class="requirement-subtitle subtext">Документ, удостоверяющий личность и гражданство</p>
+            </li>
+            <li class="requirements__item">
+
+              <h5 class="requirement-title">СНИЛС</h5>
+
+            </li>
+            <li class="requirements__item">
+              <p class="requirement-mark text">при необходимости</p>
+              <h5 class="requirement-title">Свидетельство</h5>
+              <p class="requirement-subtitle subtext">Об изменении фамилии, имени, отчества</p>
+            </li>
+            <li class="requirements__item">
+              <p class="requirement-mark text">при необходимости</p>
+              <h5 class="requirement-title">Справка</h5>
+              <p class="requirement-subtitle subtext">С места учёбы для студентов, проходящих обучение в заведениях
+                высшего и среднего профессионального образования</p>
+            </li>
+            <li class="requirements__item">
+              <p class="requirement-subtitle subtext">Документы принимаются в электронном виде (скан или фото хорошего
+                качества) в форматах JPEG, JPG, PNG, doc, docx, pdf.</p>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
 
@@ -1051,7 +1100,7 @@
       <div class="footer__wrapper">
         <div class="logo">
           <a href="#">
-            <img src="images/logo.png" />
+            <img src="images/logo-x2.png" />
           </a>
         </div>
 
@@ -1067,12 +1116,23 @@
           </a>
         </div>
 
-        <nav class="footer__nav">
+        <nav class="footer__nav footer__nav-direction">
+          <p class="footer__nav-title">Направления</p>
           <ul>
             <li>Семейная психология</li>
             <li>Психосоматика </li>
             <li>Детская психология </li>
             <li>Социальная психология </li>
+          </ul>
+        </nav>
+        <nav class="footer__nav footer__nav-nipsr">
+          <p class="footer__nav-title">О НИПСР</p>
+          <ul>
+            <li>О нас</li>
+            <li>Сведения об обр. организации </li>
+            <li>Скидки и льготы</li>
+            <li>Отзывы </li>
+            <li>Контакты </li>
           </ul>
         </nav>
 
@@ -1100,7 +1160,7 @@
           </li>
         </ul>
 
-        <button class="login__button">
+        <!-- <button class="login__button">
           <svg width="12" height="16" viewBox="0 0 12 16" fill="#151515" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M12.0001 16.0007H10.0001V12.6674C10.0001 12.3137 9.85962 11.9746 9.60957 11.7245C9.35952 11.4745 9.02038 11.334 8.66675 11.334H3.33337C2.97974 11.334 2.6406 11.4745 2.39055 11.7245C2.1405 11.9746 2.00002 12.3137 2.00002 12.6674V16.0007H0V12.6674C0.00105858 11.7836 0.352592 10.9364 0.97749 10.3115C1.60239 9.68658 2.44963 9.33504 3.33337 9.33398H8.66675C9.55049 9.33504 10.3977 9.68658 11.0226 10.3115C11.6475 10.9364 11.9991 11.7836 12.0001 12.6674V16.0007Z" />
@@ -1109,7 +1169,7 @@
           </svg>
 
           <span>Вход</span>
-        </button>
+        </button> -->
 
         <ul class="social__list">
           <li>

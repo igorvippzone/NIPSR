@@ -98,6 +98,7 @@ function navigation(slider) {
 const directionList = document.getElementById("direction__list");
 const teachersList = document.getElementById("teachers__list");
 const reviewsList = document.getElementById("reviews__list");
+const teachersCourseList= document.getElementById("teachers-course__list");
 const diplomaCertificateList = document.getElementById(
   "diploma-certificate-slider"
 );
@@ -158,6 +159,16 @@ if (teachersList) {
     [navigation]
   );
 }
+if (teachersCourseList) {
+  const teachersSlider = new KeenSlider(
+    teachersCourseList,
+    {
+      loop: true,
+      slides: { perView: 1, spacing: 30 },
+    },
+    [navigation]
+  );
+}
 
 if (reviewsList) {
   const reviewsSlider = new KeenSlider(reviewsList, {
@@ -172,38 +183,41 @@ if (reviewsList) {
 }
 
 const reviewsSlider = $("#reviews__list");
+console.log(reviewsSlider);
+if(reviewsSlider){
 
+  reviewsSlider.slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0",
+    variableWidth: true,
+    arrows: true,
+    prevArrow: '<div class=" slick-arrow arrow-prev"></div>',
+    nextArrow: '<div class="slick-arrow arrow-next"></div>',
+    responsive: [
+      {
+        breakpoint: 1351,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false,
+          arrows: false,
+          dots: true,
+        },
+      },
+    ],
+  });
+}
 // reviewsSlider.on('beforeChange', function(event, slick, currentSlide) {
 //   console.log('Current slide: ' + currentSlide );
 
 //   reviewsSlider.slick('slickSetOption', 'autoplaySpeed', 2222, true);
 // });
 
-reviewsSlider.slick({
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: "0",
-  variableWidth: true,
-  arrows: true,
-  prevArrow: '<div class=" slick-arrow arrow-prev"></div>',
-  nextArrow: '<div class="slick-arrow arrow-next"></div>',
-  responsive: [
-    {
-      breakpoint: 1351,
-      settings: {
-        slidesToShow: 1,
-        variableWidth: false,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        variableWidth: false,
-        arrows: false,
-        dots: true,
-      },
-    },
-  ],
-});
