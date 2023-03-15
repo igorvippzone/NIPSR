@@ -4,71 +4,6 @@
   gap: 40px;
 }
 
-.toggle__partition-btn {
-  background: url(../images/partition-icon.svg) no-repeat 20px center/20px;
-  padding: 16px 16px 16px 55px;
-  border: 1px solid var(--gray);
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 140%;
-  width: 100%;
-  text-align: start;
-  position: relative;
-  cursor: pointer;
-  display: none;
-}
-
-.toggle__partition-btn::after {
-  position: absolute;
-  content: "";
-  width: 8px;
-  height: 4px;
-  display: block;
-  background: url(../images/arrow-2-icon.svg) no-repeat center/8px;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  transition: transform .3s;
-}
-
-.toggle__partition-btn.active::after {
-  transform: translateY(-50%) rotate(-180deg);
-}
-
-.partition__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.partition__item {
-  background-color: var(--gray-light);
-  padding: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 140%;
-
-  transition: background-color .3s;
-}
-
-.partition__item:hover {
-  background-color: var(--gray);
-}
-
-.partition__item.active {
-  background-color: var(--gray);
-}
-
-.tabs__content {
-  display: none;
-}
-
-.tabs__content.active {
-  display: block;
-}
 
 table {
   border: 1px solid var(--black);
@@ -133,19 +68,6 @@ td {
   .information-organization {
     grid-template-columns: 1fr;
     gap: 0;
-  }
-
-  .toggle__partition-btn {
-    display: block;
-    margin-bottom: 30px;
-  }
-
-  .partition__list {
-    display: none;
-  }
-
-  .partition__list.active {
-    display: block;
   }
 }
 

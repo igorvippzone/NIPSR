@@ -109,22 +109,23 @@ document.addEventListener("DOMContentLoaded", () => {
       this.classList.add("active");
     } else {
       e.composedPath().forEach((item) => {
-        if (item?.classList?.contains("wrapper-button")) {
+        if (item?.classList?.contains("accordion-closeBtn")) {
           this.classList.remove("active");
         }
-        if (item?.classList?.contains("discount__item")) {
-          return;
-        }
+        // if (item?.classList?.contains("discount__item")) {
+        //   console.log('click');
+        //   return;
+        // }
       });
     }
   }
 
-  const discountAccordion = document.getElementById("discount-accordion");
-  if (discountAccordion) {
-    const discountItem =
-      discountAccordion.querySelectorAll("li.discount__item");
+  const accordion = document.getElementById("accordion");
+  if (accordion) {
+    const accordionItem =
+    accordion.querySelectorAll(".accordion-item");
 
-    discountItem.forEach((item) => {
+    accordionItem.forEach((item) => {
       item.addEventListener("click", toggleAccordion);
     });
   }
