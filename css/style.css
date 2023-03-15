@@ -653,7 +653,7 @@
 
 
   background: linear-gradient(276.24deg, #C4C4C4 29.44%, rgba(196, 196, 196, 0) 94.32%),
-    url(../images/applcation-bg.jpg) no-repeat -20vw top /cover;
+    url(../images/application-bg.jpg) no-repeat -20vw top /cover;
 }
 
 .application {
@@ -681,17 +681,31 @@
 }
 
 @media (min-width: 1300px) {
+  /* .section__application::before {
+    background: linear-gradient(276.24deg, #C4C4C4 40vw, rgba(196, 196, 196, 0) 94.32%),
+      url(../images/application-bg.jpg) no-repeat 0 /contain;
+
+  } */
+
   .section__application::before {
     background: linear-gradient(276.24deg, #C4C4C4 40vw, rgba(196, 196, 196, 0) 94.32%),
-      url(../images/applcation-bg.jpg) no-repeat 0 /contain;
+      url(../images/application-bg.jpg) no-repeat 0 /contain;
 
   }
 }
 
 @media (min-width: 2000px) {
-  .section__application::before {
+  /* .section__application::before {
     background-size: cover;
     background-position: top;
+  } */
+
+  .section__application::before {
+    background-position: top;
+    background-size: cover;
+  
+    background: linear-gradient(276.24deg, #C4C4C4 28%, rgba(196, 196, 196, 0) 50%),
+      url(../images/application-bg.jpg) no-repeat -20vw top /cover;
   }
 }
 
@@ -705,9 +719,10 @@
 
 @media (max-width: 767px) {
   .section__application::before {
-    transform: scale(-1, 1);
-    background: linear-gradient(177.63deg, #C7C5C1 23vw, rgba(203, 201, 197, 0) 50%),
-      url(../images/applcation-bg.jpg) no-repeat center 20vw /cover;
+    /* transform: scale(-1, 1); */
+    /* background: linear-gradient(177.63deg, #C7C5C1 23vw, rgba(203, 201, 197, 0) 50%),
+      url(../images/application-bg.jpg) no-repeat center 20vw /cover; */
+
   }
 
   .application {
@@ -735,8 +750,11 @@
   }
 
   .section__application::before {
-    background: linear-gradient(177.63deg, #C7C5C1 23vw, rgba(203, 201, 197, 0) 50%),
-      url(../images/applcation-bg.jpg) no-repeat -50vw 20vw /cover;
+    /* background: linear-gradient(177.63deg, #C7C5C1 23vw, rgba(203, 201, 197, 0) 50%),
+      url(../images/application-bg.jpg) no-repeat -50vw 20vw /cover; */
+
+      background: linear-gradient(177.63deg, #C7C5C1 23vw, rgba(203, 201, 197, 0) 50%),
+      url(../images/application-bg.jpg) no-repeat -23vw 20vw /cover;
   }
 }
 
