@@ -112,18 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (item?.classList?.contains("accordion-closeBtn")) {
           this.classList.remove("active");
         }
-        // if (item?.classList?.contains("discount__item")) {
-        //   console.log('click');
-        //   return;
-        // }
       });
     }
   }
 
   const accordion = document.getElementById("accordion");
   if (accordion) {
-    const accordionItem =
-    accordion.querySelectorAll(".accordion-item");
+    const accordionItem = accordion.querySelectorAll(".accordion-item");
 
     accordionItem.forEach((item) => {
       item.addEventListener("click", toggleAccordion);
@@ -131,29 +126,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // tabs information-organization
-  const partitions = document.querySelectorAll("li.partition__item");
-  console.log(partitions);
 
   const tabs = document.querySelector(".tabs");
-  const tabsPartition = document.querySelectorAll(".partition__item");
-  const tabsContent = document.querySelectorAll(".tabs__content");
+  const tabsPartition = tabs.querySelectorAll(".partition__item");
+  const tabsContent = tabs.querySelectorAll(".tabs__content");
 
   if (tabs) {
     tabs.addEventListener("click", (e) => {
-      if (e.target.classList.contains("partition__item")) {
-        const tabsPath = e.target.dataset.partitionPath;
-        tabsPartition.forEach((el) => el.classList.remove("active"));
-        document
-          .querySelector(`[data-partition-path='${tabsPath}']`)
-          .classList.add("active");
-        tabsHandler(tabsPath);
-        partitionList.classList.remove("active");
-      }
+      e.composedPath().forEach((item) => {
+        if (item?.classList?.contains("partition__item")) {
+          if (item?.classList?.contains("active")) return;
+
+          const tabsPath = item.dataset.partitionPath;
+          tabsPartition.forEach((el) => el.classList.remove("active"));
+
+          tabs
+            .querySelector(`[data-partition-path='${tabsPath}']`)
+            .classList.add("active");
+        
+          tabsHandler(tabsPath);
+          // partitionList?.classList.remove("active");
+        }
+      });
     });
   }
 
   const tabsHandler = (path) => {
     tabsContent.forEach((el) => {
+
       el.classList.remove("active");
     });
     document.querySelector(`[id="${path}"]`).classList.add("active");

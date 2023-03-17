@@ -116,16 +116,29 @@
   margin: 0;
   padding: 0;
   margin: 0 20px;
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 20px; */
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  gap: 10px;
 }
 
+.direction__tabs-list::-webkit-scrollbar {
+  height: 0px;
+}
 .direction__tabs-item {
+  width: 50%;
+  margin: 0;
   padding: 24px;
   cursor: pointer;
   background-color: transparent;
   transition: background-color .3s;
+}
+.direction__tabs-item p{
+  margin-top: 10px;
+display: none;
 }
 
 .direction__tabs-item:hover {
@@ -136,10 +149,22 @@
   background-color: var(--white);
 }
 
+.direction__tabs-item.active p{
+  display: block;
+  }
+
+
+  .direction-content{
+    display: none;
+  }
+  .direction-content.active{
+    display: block;
+  }
 
 #direction__list {
   margin: 0;
   padding: 0;
+  margin-top: 60px;
 }
 
 .direction__item {
@@ -253,37 +278,28 @@
     display: block;
   }
 
-  .direction__tabs-item p {
-    /* display: none; */
-  }
 
 }
 
 @media (max-width: 767px) {
-  .direction__tabs-wrapper {
-    padding-bottom: 10px;
-  }
 
+  #direction__list {
+    margin-top: 30px;
+  }
   .direction__tabs-list {
-    margin: 0;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    margin: 0 -28px;
+    padding: 0 28px;
   }
-
-  .direction__tabs-item {
+  .direction__tabs-item{
     padding: 10px;
-    background-color: var(--white);
-  }
+    width: 100%;
+    min-width: 170px;
 
-  .direction__tabs-item:hover {
-    background-color: var(--gray);
-    color: var(--white);
+      }
+  .direction__tabs-item h4{
+font-size: 16px;
   }
-
-  .direction__tabs-item.active {
-    background-color: var(--gray-dark);
-    color: var(--white);
-  }
+  
 }
 
 @media (max-width: 575px) {
@@ -580,7 +596,6 @@
 
 .advantages__item:nth-child(3n-2) .advantage-icon {
   background-color: var(--orange-dark);
-  /* background: url(../images/advantages/advantage-icon-1.png) no-repeat center/ 64px, var(--orange-dark); */
 }
 
 .advantages__item:nth-child(3n-1) .advantage-icon {
@@ -703,7 +718,7 @@
   .section__application::before {
     background-position: top;
     background-size: cover;
-  
+
     background: linear-gradient(276.24deg, #C4C4C4 28%, rgba(196, 196, 196, 0) 50%),
       url(../images/application-bg.jpg) no-repeat -20vw top /cover;
   }
@@ -753,7 +768,7 @@
     /* background: linear-gradient(177.63deg, #C7C5C1 23vw, rgba(203, 201, 197, 0) 50%),
       url(../images/application-bg.jpg) no-repeat -50vw 20vw /cover; */
 
-      background: linear-gradient(177.63deg, #C7C5C1 23vw, rgba(203, 201, 197, 0) 50%),
+    background: linear-gradient(177.63deg, #C7C5C1 23vw, rgba(203, 201, 197, 0) 50%),
       url(../images/application-bg.jpg) no-repeat -23vw 20vw /cover;
   }
 }

@@ -165,113 +165,120 @@
       </div>
     </section>
 
-    <section class="section__direction">
+    <section class="section__direction tabs">
       <div class="direction__tabs-wrapper">
         <div class="container">
           <h2 class="direction__title">Направления</h2>
-          <ul class="direction__tabs-list">
-            <li class="direction__tabs-item active">
+          <ul class="direction__tabs-list custom-scroll partition__list">
+            <li class="direction__tabs-item partition__item active" data-partition-path="part1">
               <h4>Профессиональная переподготовка</h4>
               <p class="text">Курсы для тех кто ищет новую профессию или хочет расширить профиль деятельности</p>
             </li>
-            <li class="direction__tabs-item">
+            <li class="direction__tabs-item partition__item" data-partition-path="part2">
               <h4>Повышение квалификации</h4>
+              <p class="text">Курсы для тех кто ищет новую профессию или хочет расширить профиль деятельности</p>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="direction-content direction">
+      <div class="direction-contents ">
         <div class="container">
-          <ul class="keen-slider" id="direction__list">
-            <li class="direction__item keen-slider__slide numer-slide1">
-              <img class="direction-item__image" src="images/directions/direction-1.jpg" alt="">
-              <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
-              <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod</p>
-              <div class="direction-item__inner">
-                <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 0H0V21L7.5 18L15 21V0Z" />
-                </svg>
-                <h5>5 курсов</h5>
+          <div class="direction-content tabs__content active" id="part1">
+            <ul class="keen-slider tabs__content" id="direction__list">
+              <li class="direction__item keen-slider__slide numer-slide1">
+                <img class="direction-item__image" src="images/directions/direction-1.jpg" alt="">
+                <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
+                <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod</p>
+                <div class="direction-item__inner">
+                  <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 0H0V21L7.5 18L15 21V0Z" />
+                  </svg>
+                  <h5>5 курсов</h5>
 
-              </div>
-
-
-              <div class="wrapper-arrow">
-                <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                </svg>
-              </div>
-            </li>
-
-            <li class="direction__item keen-slider__slide numer-slide2">
-              <img class="direction-item__image" src="images/directions/direction-2.jpg" alt="">
-              <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
-              <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod</p>
-              <div class="direction-item__inner">
-                <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 0H0V21L7.5 18L15 21V0Z" />
-                </svg>
-                <h5>5 курсов</h5>
-
-              </div>
-
-              <div class="wrapper-arrow">
-                <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                </svg>
-              </div>
-            </li>
-
-            <li class="direction__item keen-slider__slide numer-slide3">
-              <img class="direction-item__image" src="images/directions/direction-3.jpg" alt="">
-              <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
-              <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod</p>
-              <div class="direction-item__inner">
-                <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 0H0V21L7.5 18L15 21V0Z" />
-                </svg>
-                <h5>5 курсов</h5>
-
-              </div>
-
-              <div class="wrapper-arrow">
-                <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                </svg>
-              </div>
-            </li>
-
-            <li class="direction__item keen-slider__slide numer-slide4">
-              <img class="direction-item__image" src="images/directions/direction-4.jpg" alt="">
-              <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
-              <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod</p>
-              <div class="direction-item__inner">
-                <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 0H0V21L7.5 18L15 21V0Z" />
-                </svg>
-                <h5>5 курсов</h5>
-
-              </div>
+                </div>
 
 
-              <div class="wrapper-arrow">
-                <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
-                </svg>
-              </div>
-            </li>
-          </ul>
+                <div class="wrapper-arrow">
+                  <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </li>
+
+              <li class="direction__item keen-slider__slide numer-slide2">
+                <img class="direction-item__image" src="images/directions/direction-2.jpg" alt="">
+                <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
+                <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod</p>
+                <div class="direction-item__inner">
+                  <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 0H0V21L7.5 18L15 21V0Z" />
+                  </svg>
+                  <h5>5 курсов</h5>
+
+                </div>
+
+                <div class="wrapper-arrow">
+                  <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </li>
+
+              <li class="direction__item keen-slider__slide numer-slide3">
+                <img class="direction-item__image" src="images/directions/direction-3.jpg" alt="">
+                <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
+                <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod</p>
+                <div class="direction-item__inner">
+                  <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 0H0V21L7.5 18L15 21V0Z" />
+                  </svg>
+                  <h5>5 курсов</h5>
+
+                </div>
+
+                <div class="wrapper-arrow">
+                  <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </li>
+
+              <li class="direction__item keen-slider__slide numer-slide4">
+                <img class="direction-item__image" src="images/directions/direction-4.jpg" alt="">
+                <h4 class="direction-item__title"><a class="direction-item__link" href="#">Семейная психология</a></h4>
+                <p class="direction-item__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod</p>
+                <div class="direction-item__inner">
+                  <svg width="15" height="21" viewBox="0 0 15 21" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 0H0V21L7.5 18L15 21V0Z" />
+                  </svg>
+                  <h5>5 курсов</h5>
+
+                </div>
+
+
+                <div class="wrapper-arrow">
+                  <svg width="29" height="16" viewBox="0 0 29 16" fill="#C4C4C4" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9H28V7H0V9Z" />
+                  </svg>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="direction-content tabs__content" id="part2">
+            2
+          </div>
         </div>
       </div>
 
@@ -471,7 +478,7 @@
           <ul class="advantages__list">
             <li class="advantages__item">
               <div class="advantage-icon">
-                <img src="./images/advantages//advantage-icon-1.png"/>
+                <img src="./images/advantages//advantage-icon-1.png" />
               </div>
               <h4>Обучение в удобном темпе</h4>
               <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -480,33 +487,33 @@
 
             <li class="advantages__item">
               <div class="advantage-icon">
-                <img src="./images/advantages/advantage-icon-2.png"/>
+                <img src="./images/advantages/advantage-icon-2.png" />
               </div>
               <h4>Поддержка преподавателя</h4>
               <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
             </li>
             <li class="advantages__item">
-              <div class="advantage-icon"></div>
+              <div class="advantage-icon"><img src="./images/advantages/advantage-icon-3.png" /></div>
               <h4>Ежедневная работа службы технической поддержки</h4>
               <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
             </li>
 
             <li class="advantages__item">
-              <div class="advantage-icon"></div>
+              <div class="advantage-icon"><img src="./images/advantages/advantage-icon-4.png" /></div>
               <h4>Рассрочка без участия банка</h4>
               <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
             </li>
             <li class="advantages__item">
-              <div class="advantage-icon"></div>
+              <div class="advantage-icon"><img src="./images/advantages/advantage-icon-5.png" /></div>
               <h4>Лицензия на ведение образовательной деятельности</h4>
               <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
             </li>
             <li class="advantages__item">
-              <div class="advantage-icon"></div>
+              <div class="advantage-icon"><img src="./images/advantages/advantage-icon-6.png" /></div>
               <h4>Документы для оформления налогового вычета</h4>
               <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
@@ -589,9 +596,9 @@
 
         <ul class="confed">
           <li><a href="#">Политика
-            конфиденциальности</a></li>
+              конфиденциальности</a></li>
           <li><a href="#">Пользовательское
-            соглашение</a> </li>
+              соглашение</a> </li>
         </ul>
 
         <ul class="phone__list">
@@ -655,23 +662,24 @@
     <div class="container">
 
       <h2>Ссылки</h2>
-    <ul style="display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0;">
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="index.html">Главная</a></li>
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="about-us.html">aubout-us</a></li>
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="contacts.html">contacts</a></li>
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="course.html">course</a></li>
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="courses.html">courses</a></li>
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="discount.html">discount</a></li>
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="information-organization.html">information-organization</a></li>
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="questions.html">questions</a></li>
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="reviews.html">reviews</a></li>
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="teachers.html">teachers</a></li>
-      <li style="border: 1px solid var(--gray); padding: 10px;"><a href="teacher.html">teacher</a></li>
-      
-  
-    </ul>
+      <ul style="display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0;">
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a href="index.html">Главная</a></li>
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a href="about-us.html">aubout-us</a></li>
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a href="contacts.html">contacts</a></li>
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a href="course.html">course</a></li>
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a href="courses.html">courses</a></li>
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a href="discount.html">discount</a></li>
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a
+            href="information-organization.html">information-organization</a></li>
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a href="questions.html">questions</a></li>
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a href="reviews.html">reviews</a></li>
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a href="teachers.html">teachers</a></li>
+        <li style="border: 1px solid var(--gray); padding: 10px;"><a href="teacher.html">teacher</a></li>
+
+
+      </ul>
     </div>
-    
+
   </sections>
 
   <div id="popupMenu" class=" popup__menu animate__faster animate__animated">
